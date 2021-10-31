@@ -109,12 +109,6 @@ export default defineUserConfig<DefaultThemeOptions>({
     ],
     '@vuepress/plugin-search',
     [
-      '@vuepress/plugin-google-analytics',
-      {
-        id: 'G-XBF065RFBE',
-      },
-    ],
-    [
       require.resolve('./sitemapPlugin.ts'),
       {
         hostname: 'https://fluent-vue.demivan.me',

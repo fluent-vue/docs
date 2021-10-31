@@ -5,7 +5,6 @@
   },
   "devDependencies": {
     "@fluent/bundle": "^0.17.0",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.27",
     "@vuepress/plugin-search": "^2.0.0-beta.27",
     "@vuepress/plugin-shiki": "^2.0.0-beta.27",
     "date-fns": "^2.25.0",

@@ -2,7 +2,6 @@ lockfileVersion: 5.3
 
 specifiers:
   '@fluent/bundle': ^0.17.0
-  '@vuepress/plugin-google-analytics': ^2.0.0-beta.27
   '@vuepress/plugin-search': ^2.0.0-beta.27
   '@vuepress/plugin-shiki': ^2.0.0-beta.27
   date-fns: ^2.25.0
@@ -17,7 +16,6 @@ specifiers:
 
 devDependencies:
   '@fluent/bundle': 0.17.0
-  '@vuepress/plugin-google-analytics': 2.0.0-beta.27
   '@vuepress/plugin-search': 2.0.0-beta.27
   '@vuepress/plugin-shiki': 2.0.0-beta.27
   date-fns: 2.25.0
@@ -335,16 +333,6 @@ packages:
     dependencies:
       '@vuepress/core': 2.0.0-beta.27
       execa: 5.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@vuepress/plugin-google-analytics/2.0.0-beta.27:
-    resolution: {integrity: sha512-6JS73ROtdnnJMfAqGZAu5Z6vY2SVjQULHGAch74OSit0eJ5AFZJ7XC+Q1h7BtkqI/lfNQQnESzWixofNfvfHsg==}
-    dependencies:
-      '@vuepress/client': 2.0.0-beta.27
-      '@vuepress/core': 2.0.0-beta.27
-      '@vuepress/utils': 2.0.0-beta.27
     transitivePeerDependencies:
       - supports-color
     dev: true
