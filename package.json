@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "vuepress-vite dev",
-    "build": "vuepress-vite build"
+    "start": "vuepress-vite dev src",
+    "build": "vuepress-vite build src"
   },
   "devDependencies": {
     "@fluent/bundle": "^0.17.0",
