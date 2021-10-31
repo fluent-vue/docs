@@ -1,2 +1,3 @@
-# docs
-Documentation for fluent-vue
+# fluent-vue documentation 
+
+https://fluent-vue.demivan.me
