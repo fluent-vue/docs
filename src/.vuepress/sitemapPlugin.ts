@@ -3,8 +3,7 @@ import { createWriteStream, promises } from 'fs'
 import { resolve } from 'path'
 import chalk from 'chalk'
 import { SitemapItemLoose, SitemapStream } from 'sitemap'
-import { pipeline } from 'stream/promises'
-import { Readable } from 'stream'
+import { Readable, pipeline } from 'stream'
 
 const log = (msg: string, color = 'blue', label = 'SITEMAP') =>
   console.log(`\n${chalk.reset.inverse.bold[color](` ${label} `)} ${msg}`)
@@ -138,7 +137,21 @@ const plugin: Plugin<Options> = (options, context) => {
       const destinationDir = context.options.dest
       await promises.mkdir(destinationDir, { recursive: true });
       const writePath = resolve(destinationDir, './sitemap.xml');
-      await pipeline(src, sitemapStream, createWriteStream(writePath));
+      
+      await new Promise((resolve, reject) => {
+        pipeline(
+          src,
+          sitemapStream,
+          createWriteStream(writePath),
+          (err) => {
+            if (err) {
+              reject(err)
+            } else {
+              resolve(undefined)
+            }
+          }
+        )
+      })
 
       log('Sitemap generated')
     }
