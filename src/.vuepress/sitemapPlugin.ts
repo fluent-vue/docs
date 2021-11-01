@@ -1,4 +1,4 @@
-import type { Plugin } from 'vuepress'
+import type { Plugin } from 'vuepress-vite'
 import { createWriteStream, promises } from 'fs'
 import { resolve } from 'path'
 import chalk from 'chalk'

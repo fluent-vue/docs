@@ -58,9 +58,9 @@ export default defineUserConfig<DefaultThemeOptions>({
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }]
   ],
   themeConfig: {
-    repo: 'demivan/fluent-vue',
+    repo: 'fluent-vue/docs',
     logo: '/assets/logo.svg',
-    docsDir: 'docs',
+    docsDir: 'src',
     docsBranch: 'main',
     editLinks: true,
     smoothScroll: true,
