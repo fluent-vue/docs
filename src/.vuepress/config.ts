@@ -78,7 +78,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/vue-i18n-comparison.html',
       {
         text: 'HOWTO',
-        children: ['/howto/change-locale.html', '/howto/date-time.html', '/howto/access-outside-of-component.html'],
+        children: ['/howto/change-locale.html', '/howto/date-time.html', '/howto/importing-ftl-files.html', '/howto/access-outside-of-component.html'],
         collapsable: false,
       },
       {
