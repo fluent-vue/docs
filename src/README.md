@@ -11,20 +11,6 @@ actions:
     link: /introduction.html
     type: primary
 
-features:
-- title: Simple api
-  details: Just 2 methods, 1 directive and 1 component is all you need to internationalize your app.
-- title: Vue 2 and 3 compatible
-  details: By utilising @vue/composition-api library, fluent-vue is made compatible both with Vue version 2 and version 3.
-- title: SFC support
-  details: With fluent-vue-loader you can include localization messages with rest of your single file component code.
-- title: Easy to read
-  details: Fluent syntax used for describing translation is easy to read and understand.
-- title: Powerful
-  details: Fluent syntax allows to represent complex concepts of natural languages.
-- title: Asymmetric localization
-  details: Natural-sounding translations with genders and grammatical cases only when necessary.
-
 footer: MIT Licensed | Copyright © 2020-present Ivan Demchuk
 ---
 
