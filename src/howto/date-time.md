@@ -60,4 +60,8 @@ const fluent = createFluentVue({
 
 @[code{11-33}](../components/DateTimeCustom.vue)
 
+<script setup>
+  import DateTimeCustom from '../components/DateTimeCustom.vue'
+</script>
+
 <date-time-custom />

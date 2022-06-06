@@ -1,13 +1,9 @@
-.navbar .site-name {
-  display: none;
-}
-
-.navbar .logo {
+.VPNavBarTitle .logo {
   width: 226px;
   height: 35px;
 }
 
-.dark .navbar .logo {
+.dark .VPNavBarTitle .logo {
   filter: invert(80%);
 }
 

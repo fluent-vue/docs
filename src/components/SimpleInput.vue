@@ -16,36 +16,42 @@
         </div>
       </div>
       <div class="p-field p-grid">
-        <label for="photoCount" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">$photoCount</label>
-        <div class="p-col-12 p-md-10">
-          <p-slider v-model="photoCount" id="photoCount" :min="1" :max="30" class="p-mt-2" />
-        </div>
+        <label for="photoCount" class="form-label">$photoCount</label>
+        <input
+          v-model.number="photoCount"
+          type="range"
+          min="1"
+          max="5"
+          class="
+            form-range
+            appearance-none
+            w-full
+            h-6
+            p-0
+            bg-transparent
+            focus:outline-none focus:ring-0 focus:shadow-none
+          "
+          id="photoCount"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+  import { ref } from 'vue'
+
   import Simple from './Simple.vue'
 
-  export default {
-    name: 'simple-input',
-    components: {
-      Simple
-    },
-    data () {
-      return {
-        userName: 'John Doe',
-        userGender: 'male',
-        photoCount: 2,
-        genderOptions: [
-          'male',
-          'female',
-          'unspecified'
-        ]
-      }
-    }
-  }
+  const userName = ref('John Doe')
+  const userGender = ref('male')
+  const photoCount = ref(2)
+
+  const genderOptions = [
+    'male',
+    'female',
+    'unspecified'
+  ]
 </script>
 
 <style>

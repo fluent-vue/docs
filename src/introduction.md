@@ -8,6 +8,10 @@ Fluent keeps simple things simple and makes complex things possible. The syntax 
 
 ## Example
 
-@[code{11-33}](./components/Simple.vue)
+<<< @/components/SimpleSource.vue
+
+<script setup>
+  import SimpleInput from './components/SimpleInput.vue'
+</script>
 
 <simple-input />
