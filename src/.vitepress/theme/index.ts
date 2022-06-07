@@ -5,6 +5,9 @@ import { createFluentVue } from 'fluent-vue'
 
 import { format } from 'date-fns'
 
+import CodeGroup from './CodeGroup.vue'
+import CodeBlock from './CodeBlock.vue'
+
 import './theme.css'
 
 const bundle = new FluentBundle('en', {
@@ -24,5 +27,8 @@ export default {
   ...DefaultTheme,
   enhanceApp({ app, router, siteData }) {
     app.use(fluent)
+
+    app.component('code-group', CodeGroup)
+    app.component('code-block', CodeBlock)
   }
 }

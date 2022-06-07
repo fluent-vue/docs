@@ -16,5 +16,9 @@ code {
 }
 
 pre {
-  font-family: "JetBrains Mono", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: var(--font-family-code);
+}
+
+.mono {
+  font-family: var(--font-family-code)
 }
