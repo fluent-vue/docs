@@ -95,7 +95,11 @@ export default async() => defineConfig({
   title: 'fluent-vue',
   description: 'fluent-vue is an internationalization plugin for Vue.js that works both with Vue 2 and Vue 3. Is it a Vue.js integration for Mozilla\'s Project Fluent.',
   head: [
-    ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }]
+    ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
+    ['meta', { property: 'og:url', content: 'https://fluent-vue.demivan.me' }],
+    ['meta', { property: 'og:title', content: 'fluent-vue - Internationalization plugin for Vue.js' }],
+    ['meta', { property: 'og:description', content: 'Vue.js integration for Fluent.js - JavaScript implementation of Mozilla\'s Project Fluent' }],
+    ['meta', { property: 'og:image', content: 'https://fluent-vue.demivan.me/preview.png' }],
   ],
 
   themeConfig: {
