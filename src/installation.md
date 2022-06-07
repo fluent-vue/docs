@@ -18,10 +18,17 @@ however, a polyfill is required. You can use [polyfill.io](https://polyfill.io) 
 Add `fluent-vue` and `@fluent/bundle` to your project.
 
 <code-group>
+<code-group-item title="PNPM" active>
 
-<code-group-item title="YARN" active>
+```shell
+pnpm add fluent-vue @fluent/bundle
+```
 
-```bash:no-line-numbers
+</code-group-item>
+
+<code-group-item title="YARN">
+
+```shell
 yarn add fluent-vue @fluent/bundle
 ```
 
@@ -29,28 +36,34 @@ yarn add fluent-vue @fluent/bundle
 
 <code-group-item title="NPM">
 
-```bash:no-line-numbers
+```shell
 npm install fluent-vue @fluent/bundle
 ```
 
 </code-group-item>
-
 </code-group>
 
 #### Note:
 If you are using `Vue` version 2 you need to install `@vue/composition-api`
 
 <code-group>
-<code-group-item title="YARN" active>
+<code-group-item title="PNPM" active>
 
-```bash:no-line-numbers
+```shell
+pnpm add @vue/composition-api
+```
+
+</code-group-item>
+<code-group-item title="YARN">
+
+```shell
 yarn add @vue/composition-api
 ```
 
 </code-group-item>
 <code-group-item title="NPM">
 
-```bash:no-line-numbers
+```shell
 npm install @vue/composition-api
 ```
 
@@ -88,8 +101,8 @@ createApp(App)
   // Install Vue plugin
   .use(fluent)
 ```
-
 </code-group-item>
+
 <code-group-item title="Vue 2">
 
 ```js
@@ -117,4 +130,5 @@ Vue.use(fluent)
 ```
 
 </code-group-item>
+
 </code-group>

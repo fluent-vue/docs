@@ -1,0 +1,24 @@
+.VPNavBarTitle .logo {
+  width: 226px;
+  height: 35px;
+}
+
+.dark .VPNavBarTitle .logo {
+  filter: invert(80%);
+}
+
+code {
+  font-size: 0.875em;
+}
+
+:root {
+  --vp-font-family-mono: "JetBrains Mono", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace
+}
+
+pre {
+  font-family: var(--vp-font-family-mono);
+}
+
+.mono {
+  font-family: var(--vp-font-family-mono)
+}

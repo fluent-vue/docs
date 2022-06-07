@@ -1,6 +1,6 @@
 # `$t` and `$ta` instance methods
 
-### `$t` method
+## `$t` method
 
 Formats message  with `key` identifier. `args` is used to resolve references to variables passed as arguments to the translation.
 
@@ -25,7 +25,7 @@ Result:
 <p>Hello, World</p>
 ```
 
-### `$ta` method
+## `$ta` method
 
 Formats message with `key` identifier, but only returns message attributes. `args` is used to resolve references to variables passed as arguments to the translation.
 

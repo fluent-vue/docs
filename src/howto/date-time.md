@@ -2,6 +2,11 @@
 description: 'fluent-vue has built-in date and time formatting using native js methods. But it allows custom implementation using any library you want: dayjs, date-fns, moment, etc.'
 ---
 
+<script setup>
+  import DateTimeComponent from '../components/DateTime.vue'
+  import DateTimeCustom from '../components/DateTimeCustom.vue'
+</script>
+
 # Localizing date and time
 
 Fluent has build-in function for formatting date and time: `DATETIME`. It uses [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) under the hood.
@@ -27,9 +32,11 @@ See the [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
 ### Example component
 
-@[code{11-33}](../components/DateTime.vue)
+<<< @/components/DateTime.vue#snippet
 
-<date-time />
+::: info Output
+<date-time-component />
+:::
 
 ## Using custom library for date formatting
 
@@ -58,6 +65,8 @@ const fluent = createFluentVue({
 
 ### Use it
 
-@[code{11-33}](../components/DateTimeCustom.vue)
+<<< @/components/DateTimeCustom.vue#snippet
 
+::: info Output
 <date-time-custom />
+:::

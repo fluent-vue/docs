@@ -17,7 +17,7 @@ Text in Fluent can use special syntax to incorporate small pieces of programmabl
 
 Placeables can be used to interpolate external variables into the translation, interpolate other messages and terms or insert special characters.
 
-### Variables
+## Variables
 
 Variables are parameters received from the app. They are provided by the developer and can be interpolated into the translation.
 
@@ -28,7 +28,7 @@ unread-emails = { $user } has { $email-count } unread emails.
 
 Numbers and dates are automatically formatted according to target language formatting rules.
 
-### Select expression
+## Select expression
 
 ```ftl
 emails = { $unreadEmails ->
@@ -63,13 +63,13 @@ your-rank = { NUMBER($pos, type: "ordinal") ->
 }
 ```
 
-### Functions
+## Functions
 
 Functions provide additional functionality available to the translators. They can be either used to format data or can provide additional data that the translator may use (like, current user gender, or time of the day) to fine tune the translation. The list of available functions is extensible.
 
 There are two built-in functions `NUMBER` and `DATETIME`.
 
-#### `NUMBER` function
+### `NUMBER` function
 
 Formats a number to a string in a given locale.
 
@@ -85,7 +85,7 @@ Result:
 π is 3.1415
 ```
 
-#### `DATETIME` function
+### `DATETIME` function
 
 Formats a date and time to a string in a given locale. Main page: [Localizing date and time](/howto/date-time.html)
 
@@ -101,7 +101,7 @@ Result:
 Today is ⁨September 10, 2021⁩
 ```
 
-### Referencing messages
+## Referencing messages
 
 Referencing other messages generally helps to keep certain translations consistent across the interface and makes maintenance easier.
 
@@ -110,7 +110,7 @@ menu-save = Save
 help-menu-save = Click { menu-save } to save the file.
 ```
 
-### Attributes
+## Attributes
 
 UI elements often contain multiple translatable messages per one element. In order to prevent having to define multiple separate messages for representing different strings within a single element, FTL allows you to add attributes to messages.
 
@@ -123,7 +123,7 @@ login-input = Predefined value
 
 Attributes may also be used to define grammatical properties of [terms](/fluent-syntax.html#terms). Attributes of terms are private and cannot be retrieved by the localization runtime. They can only be used as [selectors](/fluent-syntax.html#select-expression).
 
-### Terms
+## Terms
 
 Terms are similar to regular messages but they can only be used as references in other messages.
 
@@ -134,7 +134,7 @@ about = About { -brand-name }.
 update-successful = { -brand-name } has been updated.
 ```
 
-#### Parameterized Terms
+### Parameterized Terms
 
 Term values follow the same rules as message values. They can be simple text, or they can interpolate other expressions, including variables.
 
@@ -152,7 +152,7 @@ In many inflected languages (e.g. German, Finnish, Hungarian, all Slavic languag
 about = Informacje o { -brand-name(case: "locative") }.
 ```
 
-#### Terms and Attributes
+### Terms and Attributes
 
 Sometimes translations might vary depending on some grammatical trait of a term references in them. Terms can store this grammatical information about themselves in [attributes](/fluent-syntax.html#attributes).
 
@@ -169,7 +169,7 @@ update-successful = { -brand-name.gender ->
 
 Use attributes to describe grammatical traits and properties. Genders, animacy, whether the term message starts with a vowel or not etc.
 
-### Comments
+## Comments
 
 Comments in Fluent start with `#`, `##`, or `###`, and can be used to document messages and to define the outline of the file.
 

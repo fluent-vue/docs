@@ -5,7 +5,7 @@ description: List of official and third-party tools that support fluent-vue
 
 # Tooling and integrations
 
-This is the list of official and third-party tools that support fluent-vue.
+This is the list of official and third-party tools that support `fluent-vue`.
 
 ## Official 
 
@@ -35,4 +35,4 @@ It reports missing translations, allows to extract hardcoded strings, and much m
 
 Check their [README](https://github.com/lokalise/i18n-ally) for more information.
 
-![i18n Ally](../assets/i18n-ally.png)
+![i18n Ally](../public/assets/i18n-ally.png)

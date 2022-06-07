@@ -57,7 +57,7 @@ sign-in-up-to-add-comments =
 
 As you can see entire sentence uses just one translation key. It does not use v-html directive. And we can even add comments, so translators know what they are dealing with.
 
-### API
+## API
 
 * Props:
   * `path {string}` localization message key
@@ -83,7 +83,7 @@ Result:
 <div>Hello, <b>World</b>!</div>
 ```
 
-### Scoped slots
+## Scoped slots
 
 Message attributes are passed as scoped slot parameters. This allows to not split translation into multiple messages. And attributes have access to same parameters entire message has access to.
 
