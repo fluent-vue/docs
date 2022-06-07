@@ -12,13 +12,13 @@ code {
 }
 
 :root {
-  --font-family-code: "JetBrains Mono", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace
+  --vp-font-family-mono: "JetBrains Mono", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace
 }
 
 pre {
-  font-family: var(--font-family-code);
+  font-family: var(--vp-font-family-mono);
 }
 
 .mono {
-  font-family: var(--font-family-code)
+  font-family: var(--vp-font-family-mono)
 }
