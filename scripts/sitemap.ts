@@ -32,12 +32,14 @@ console.log('Generating sitemap.xml')
 generateSitemap()
 console.log('Done')
 
-console.log('Fixing description')
+console.log('Fixing html')
 glob
   .sync('**/*.html', { cwd: outDir })
   .forEach(file => {
     const html = readFileSync(resolve(outDir, file), 'utf-8')
-    const newHtml = html.replace(/<meta name="description" content="A VitePress site">/g, '')
+    const newHtml = html
+      .replace(/<meta name="description" content="A VitePress site">/g, '')
+      .replace(/<img class="logo"/g, '<img class="logo" alt="fluent-vue logo"')
     writeFileSync(resolve(outDir, file), newHtml)
   })
 console.log('Done')
