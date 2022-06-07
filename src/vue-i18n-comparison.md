@@ -1,8 +1,12 @@
 # Comparison with vue-i18n
 
+`fluent-vue` API is inspired by `vue-i18n`. But API surface is much smaller as most things are handled by Fluent syntax.
+
+Blog post about my motivation for switching from `vue-i18n`: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/2021-08-08-vue-i18n-in-real-world-application.html)
+
 ## Formatting
 
-Simple formatting API in `fluent-vue` is similar to `vue-i18n`.
+Simple formatting API in `fluent-vue` is very similar to `vue-i18n`.
 
 ### fluent-vue
 

@@ -5,7 +5,7 @@ description: List of official and third-party tools that support fluent-vue
 
 # Tooling and integrations
 
-This is the list of official and third-party tools that support fluent-vue.
+This is the list of official and third-party tools that support `fluent-vue`.
 
 ## Official 
 

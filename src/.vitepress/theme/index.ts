@@ -29,6 +29,6 @@ export default {
     app.use(fluent)
 
     app.component('code-group', CodeGroup)
-    app.component('code-block', CodeBlock)
+    app.component('code-group-item', CodeBlock)
   }
 }

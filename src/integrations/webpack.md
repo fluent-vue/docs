@@ -8,7 +8,7 @@ description: fluent-vue-loader - official Webpack loader for fluent-vue that all
 
 **Example**
 
-@[code{11-33}](../components/Simple.vue)
+<<< @/components/Simple.vue#snippet
 
 ## Instalation
 
@@ -16,9 +16,17 @@ description: fluent-vue-loader - official Webpack loader for fluent-vue that all
 
 <code-group>
 
-<code-group-item title="YARN" active>
+<code-group-item title="PNPM" active>
 
-```bash:no-line-numbers
+```shell
+pnpm add fluent-vue-loader -D
+```
+
+</code-group-item>
+
+<code-group-item title="YARN">
+
+```shell
 yarn add fluent-vue-loader --dev
 ```
 
@@ -26,7 +34,7 @@ yarn add fluent-vue-loader --dev
 
 <code-group-item title="NPM">
 
-```bash:no-line-numbers
+```shell
 npm install fluent-vue-loader --save-dev
 ```
 
@@ -34,7 +42,7 @@ npm install fluent-vue-loader --save-dev
 
 </code-group>
 
-2. Configure Webpack
+1. Configure Webpack
 ```js
 module.exports = {
   // ...

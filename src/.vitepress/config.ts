@@ -104,17 +104,45 @@ export default async() => defineConfig({
 
     sidebar: [
       {
+        text: 'Guide',
+        items: [
+          { text: 'Introduction', link: '/introduction' },
+          { text: 'Fluent syntax', link: '/fluent-syntax' },
+          { text: 'Installation', link: '/installation' },
+          { text: 'Comparison with vue-i18n', link: '/vue-i18n-comparison' },
+        ]
+      },
+      {
+        text: 'Api',
+        items: [
+          { text: '$t and $ta instance methods', link: '/api/instance-methods' },
+          { text: 'v-t directive', link: '/api/v-t-directive' },
+          { text: 'i18n component', link: '/api/i18n-component' },
+        ]
+      },
+      {
         text: 'How-to',
         items: [
           { text: 'Changing locale', link: '/howto/change-locale' },
-          { text: 'Localizing date and time', link: '/howto/date-time' }
+          { text: 'Localizing date and time', link: '/howto/date-time' },
+          { text: 'Importing .ftl files', link: '/howto/importing-ftl-files' },
+          { text: 'Access outside of component', link: '/howto/access-outside-of-component' },
+        ]
+      },
+      {
+        text: 'Tooling and integrations',
+        items: [
+          { text: 'Overview', link: '/integrations/' },
+          { text: 'Webpack loader', link: '/integrations/webpack' },
+          { text: 'Rollup plugin', link: '/integrations/rollup.html' },
+          { text: 'Vite plugin', link: '/integrations/vite.html' },
         ]
       }
     ],
 
     editLink: {
       repo: 'fluent-vue/docs',
-      dir: 'docs',
+      dir: 'src',
       text: 'Edit this page on GitHub'
     },
 

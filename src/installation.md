@@ -18,62 +18,62 @@ however, a polyfill is required. You can use [polyfill.io](https://polyfill.io) 
 Add `fluent-vue` and `@fluent/bundle` to your project.
 
 <code-group>
-<code-block title="PNPM" active>
+<code-group-item title="PNPM" active>
 
 ```shell
 pnpm add fluent-vue @fluent/bundle
 ```
 
-</code-block>
+</code-group-item>
 
-<code-block title="YARN">
+<code-group-item title="YARN">
 
 ```shell
 yarn add fluent-vue @fluent/bundle
 ```
 
-</code-block>
+</code-group-item>
 
-<code-block title="NPM">
+<code-group-item title="NPM">
 
 ```shell
 npm install fluent-vue @fluent/bundle
 ```
 
-</code-block>
+</code-group-item>
 </code-group>
 
 #### Note:
 If you are using `Vue` version 2 you need to install `@vue/composition-api`
 
 <code-group>
-<code-block title="PNPM" active>
+<code-group-item title="PNPM" active>
 
 ```shell
 pnpm add @vue/composition-api
 ```
 
-</code-block>
-<code-block title="YARN">
+</code-group-item>
+<code-group-item title="YARN">
 
 ```shell
 yarn add @vue/composition-api
 ```
 
-</code-block>
-<code-block title="NPM">
+</code-group-item>
+<code-group-item title="NPM">
 
 ```shell
 npm install @vue/composition-api
 ```
 
-</code-block>
+</code-group-item>
 </code-group>
 
 ## Configure and install Vue plugin
 
 <code-group>
-<code-block title="Vue 3" active>
+<code-group-item title="Vue 3" active>
 
 ```js
 import { createApp } from 'vue'
@@ -101,9 +101,9 @@ createApp(App)
   // Install Vue plugin
   .use(fluent)
 ```
-</code-block>
+</code-group-item>
 
-<code-block title="Vue 2">
+<code-group-item title="Vue 2">
 
 ```js
 import Vue from 'vue'
@@ -129,6 +129,6 @@ const fluent = createFluentVue({
 Vue.use(fluent)
 ```
 
-</code-block>
+</code-group-item>
 
 </code-group>

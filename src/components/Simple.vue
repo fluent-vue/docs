@@ -8,7 +8,7 @@
   }
 </script>
 
-#region snippet
+// #region snippet
 <template>
   <div>
     <div>{{ $t('hello-user', { userName }) }}</div>
@@ -23,7 +23,7 @@ hello-user = Hello, {$userName}!
 # Complex things are possible.
 shared-photos =
   {$userName} {$photoCount ->
-     [one] added one photo
+     [1] added one photo
     *[other] added {$photoCount} new photos
   } to {$userGender ->
      [male] his stream
@@ -31,4 +31,4 @@ shared-photos =
     *[other] their stream
   }.
 </fluent>
-#endregion snippet
+// #endregion snippet

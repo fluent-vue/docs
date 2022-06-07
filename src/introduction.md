@@ -8,10 +8,14 @@ Fluent keeps simple things simple and makes complex things possible. The syntax 
 
 ## Example
 
+::: info Example
+
+<simple-input />
+
+:::
+
 <<< @/components/Simple.vue#snippet
 
 <script setup>
   import SimpleInput from './components/SimpleInput.vue'
 </script>
-
-<simple-input />

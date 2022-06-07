@@ -1,5 +1,5 @@
 <template>
-  <div class="demo">
+  <div>
     <simple :user-name="userName" :user-gender="userGender" :photo-count="photoCount" class="demo" />
 
     <div class="p-fluid p-py-3">
