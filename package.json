@@ -1,10 +1,14 @@
 {
   "scripts": {
     "dev": "vitepress dev src",
-    "build": "vitepress build src"
+    "build": "vitepress build src",
+    "postbuild": "tsno run scripts/sitemap.ts"
   },
   "devDependencies": {
+    "fast-glob": "^3.2.11",
     "rollup-plugin-fluent-vue": "^3.0.0",
+    "sitemap": "^7.1.1",
+    "tsno": "^2.0.0",
     "vitepress": "^1.0.0-alpha.1"
   },
   "dependencies": {
