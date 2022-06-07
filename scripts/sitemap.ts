@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { writeFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import glob from 'fast-glob'
 
@@ -30,4 +30,14 @@ function generateSitemap() {
 
 console.log('Generating sitemap.xml')
 generateSitemap()
+console.log('Done')
+
+console.log('Fixing description')
+glob
+  .sync('**/*.html', { cwd: outDir })
+  .forEach(file => {
+    const html = readFileSync(resolve(outDir, file), 'utf-8')
+    const newHtml = html.replace(/<meta name="description" content="A VitePress site">/g, '')
+    writeFileSync(resolve(outDir, file), newHtml)
+  })
 console.log('Done')
