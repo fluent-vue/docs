@@ -60,7 +60,7 @@
 
   input, select {
     background: none;
-    color: white;
+    color: var(--vp-c-text-1);
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
