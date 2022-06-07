@@ -8,7 +8,7 @@ Fluent keeps simple things simple and makes complex things possible. The syntax 
 
 ## Example
 
-<<< @/components/SimpleSource.vue
+<<< @/components/Simple.vue#snippet
 
 <script setup>
   import SimpleInput from './components/SimpleInput.vue'

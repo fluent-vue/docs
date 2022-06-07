@@ -8,6 +8,7 @@
   }
 </script>
 
+#region snippet
 <template>
   <div>
     <div>{{ $t('hello-user', { userName }) }}</div>
@@ -30,3 +31,4 @@ shared-photos =
     *[other] their stream
   }.
 </fluent>
+#endregion snippet

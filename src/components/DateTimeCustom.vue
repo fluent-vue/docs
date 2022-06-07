@@ -1,13 +1,10 @@
-<script>
-export default {
-  data () {
-    return {
-      now: new Date()
-    }
-  }
-}
+<script setup>
+import { useNow } from '@vueuse/core'
+
+const now = useNow()
 </script>
 
+// #region snippet
 <template>
   <p class="demo">
     {{ $t('default', { now }) }}<br>
@@ -19,5 +16,6 @@ export default {
 <fluent locale="en">
 default = Now is {{ $now }}
 today = Today is {{ DATEFNS($now, "PP") }}
-now = It is {{ DATEFNS($now, "p") }}
+now = It is {{ DATEFNS($now, "pp") }}
 </fluent>
+// #endregion snippet

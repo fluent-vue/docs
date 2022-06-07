@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fluent/bundle': ^0.17.0
+  '@vueuse/core': ^8.6.0
   date-fns: ^2.25.0
   fluent-vue: ^3.0.0
   rollup-plugin-fluent-vue: ^3.0.0
@@ -10,6 +11,7 @@ specifiers:
   vue: ^3.2.36
 
 dependencies:
+  '@vueuse/core': 8.6.0_vue@3.2.36
   vue: 3.2.36
 
 devDependencies:
@@ -290,11 +292,9 @@ packages:
       '@vueuse/shared': 8.6.0_vue@3.2.36
       vue: 3.2.36
       vue-demi: 0.13.1_vue@3.2.36
-    dev: true
 
   /@vueuse/metadata/8.6.0:
     resolution: {integrity: sha512-F+CKPvaExsm7QgRr8y+ZNJFwXasn89rs5wth/HeX9lJ1q8XEt+HJ16Q5Sxh4rfG5YSKXrStveVge8TKvPjMjFA==}
-    dev: true
 
   /@vueuse/shared/8.6.0_vue@3.2.36:
     resolution: {integrity: sha512-Y/IVywZo7IfEoSSEtCYpkVEmPV7pU35mEIxV7PbD/D3ly18B3mEsBaPbtDkNM/QP3zAZ5mn4nEkOfddX4uwuIA==}
@@ -309,7 +309,6 @@ packages:
     dependencies:
       vue: 3.2.36
       vue-demi: 0.13.1_vue@3.2.36
-    dev: true
 
   /algoliasearch/4.13.1:
     resolution: {integrity: sha512-dtHUSE0caWTCE7liE1xaL+19AFf6kWEcyn76uhcitWpntqvicFHXKFoZe5JJcv9whQOTRM6+B8qJz6sFj+rDJA==}
@@ -774,7 +773,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.36
-    dev: true
 
   /vue/3.2.36:
     resolution: {integrity: sha512-5yTXmrE6gW8IQgttzHW5bfBiFA6mx35ZXHjGLDmKYzW6MMmYvCwuKybANRepwkMYeXw2v1buGg3/lPICY5YlZw==}
