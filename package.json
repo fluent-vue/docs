@@ -4,15 +4,14 @@
     "build": "vitepress build src"
   },
   "devDependencies": {
-    "@fluent/bundle": "^0.17.0",
-    "date-fns": "^2.25.0",
-    "fluent-vue": "^3.0.0",
     "rollup-plugin-fluent-vue": "^3.0.0",
-    "sitemap": "^7.0.0",
     "vitepress": "^1.0.0-alpha.1"
   },
   "dependencies": {
+    "@fluent/bundle": "^0.17.0",
     "@vueuse/core": "^8.6.0",
+    "date-fns": "^2.25.0",
+    "fluent-vue": "^3.0.0",
     "vue": "^3.2.36"
   }
 }

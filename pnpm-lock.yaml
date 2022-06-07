@@ -6,20 +6,18 @@ specifiers:
   date-fns: ^2.25.0
   fluent-vue: ^3.0.0
   rollup-plugin-fluent-vue: ^3.0.0
-  sitemap: ^7.0.0
   vitepress: ^1.0.0-alpha.1
   vue: ^3.2.36
 
 dependencies:
+  '@fluent/bundle': 0.17.0
   '@vueuse/core': 8.6.0_vue@3.2.36
+  date-fns: 2.25.0
+  fluent-vue: 3.0.0_mr6cufgt6ycgfyxmc7zfnmihk4
   vue: 3.2.36
 
 devDependencies:
-  '@fluent/bundle': 0.17.0
-  date-fns: 2.25.0
-  fluent-vue: 3.0.0_mr6cufgt6ycgfyxmc7zfnmihk4
   rollup-plugin-fluent-vue: 3.0.0
-  sitemap: 7.0.0
   vitepress: 1.0.0-alpha.1
 
 packages:
@@ -172,7 +170,7 @@ packages:
   /@fluent/bundle/0.17.0:
     resolution: {integrity: sha512-G/9wDCTKGPyHgw4ON3vBlLUIBBGG7vq8ytExqh4uwTfoeOfQ5VU5Xr6F+UV8B72k9P9S72GqFTXvqjS48pBVpg==}
     engines: {node: '>=12.0.0', npm: '>=7.0.0'}
-    dev: true
+    dev: false
 
   /@fluent/sequence/0.7.0_@fluent+bundle@0.17.0:
     resolution: {integrity: sha512-aH1xMwX8DFvKOQSKUKpB3zMsnJ2rRKt7MajLNnx/r3V3DWDo2nzEfm21d7UyOgwEckPIjPmhxdW1MEmsGUxYIw==}
@@ -181,17 +179,7 @@ packages:
       '@fluent/bundle': '>= 0.13.0'
     dependencies:
       '@fluent/bundle': 0.17.0
-    dev: true
-
-  /@types/node/15.14.9:
-    resolution: {integrity: sha512-qjd88DrCxupx/kJD5yQgZdcYKZKSIGBVDIBE1/LTGcNm3d2Np/jxojkdePDdfnBHJc5W7vSMpbJ1aB7p/Py69A==}
-    dev: true
-
-  /@types/sax/1.2.3:
-    resolution: {integrity: sha512-+QSw6Tqvs/KQpZX8DvIl3hZSjNFLW/OqE5nlyHXtTwODaJvioN2rOWpBNEWZp2HZUFhOh+VohmJku/WxEXU2XA==}
-    dependencies:
-      '@types/node': 15.14.9
-    dev: true
+    dev: false
 
   /@vitejs/plugin-vue/2.3.3_vite@2.9.9+vue@3.2.36:
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
@@ -329,10 +317,6 @@ packages:
       '@algolia/transporter': 4.13.1
     dev: true
 
-  /arg/5.0.1:
-    resolution: {integrity: sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==}
-    dev: true
-
   /body-scroll-lock/4.0.0-beta.0:
     resolution: {integrity: sha512-a7tP5+0Mw3YlUJcGAKUqIBkYYGlYxk2fnCasq/FUph1hadxlTRjF+gAcZksxANnaMnALjxEddmSi/H3OR8ugcQ==}
     dev: true
@@ -340,7 +324,7 @@ packages:
   /cached-iterable/0.3.0:
     resolution: {integrity: sha512-MDqM6TpBVebZD4UDtmlFp8EjVtRcsB6xt9aRdWymjk0fWVUUGgmt/V7o0H0gkI2Tkvv8B0ucjidZm4mLosdlWw==}
     engines: {node: '>=8.9.0'}
-    dev: true
+    dev: false
 
   /csstype/2.6.18:
     resolution: {integrity: sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==}
@@ -348,7 +332,7 @@ packages:
   /date-fns/2.25.0:
     resolution: {integrity: sha512-ovYRFnTrbGPD4nqaEqescPEv1mNwvt+UTqI3Ay9SzNtey9NZnYu6E2qCcBBgJ6/2VF1zGGygpyTDITqpQQ5e+w==}
     engines: {node: '>=0.11'}
-    dev: true
+    dev: false
 
   /esbuild-android-64/0.14.42:
     resolution: {integrity: sha512-P4Y36VUtRhK/zivqGVMqhptSrFILAGlYp0Z8r9UQqHJ3iWztRCNWnlBzD9HRx0DbueXikzOiwyOri+ojAFfW6A==}
@@ -577,7 +561,7 @@ packages:
       tslib: 2.3.1
       vue: 3.2.36
       vue-demi: 0.13.1_vue@3.2.36
-    dev: true
+    dev: false
 
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -658,27 +642,12 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /sax/1.2.4:
-    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
-    dev: true
-
   /shiki/0.10.1:
     resolution: {integrity: sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==}
     dependencies:
       jsonc-parser: 3.0.0
       vscode-oniguruma: 1.6.2
       vscode-textmate: 5.2.0
-    dev: true
-
-  /sitemap/7.0.0:
-    resolution: {integrity: sha512-Ud0jrRQO2k7fEtPAM+cQkBKoMvxQyPKNXKDLn8tRVHxRCsdDQ2JZvw+aZ5IRYYQVAV9iGxEar6boTwZzev+x3g==}
-    engines: {node: '>=12.0.0', npm: '>=5.6.0'}
-    hasBin: true
-    dependencies:
-      '@types/node': 15.14.9
-      '@types/sax': 1.2.3
-      arg: 5.0.1
-      sax: 1.2.4
     dev: true
 
   /source-map-js/1.0.2:
@@ -703,7 +672,7 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
+    dev: false
 
   /vite/2.9.9:
     resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==}
