@@ -45,3 +45,39 @@ import enMessages from './en.ftl?raw'
 const enBundle = new FluentBundle('en')
 enBundle.addResource(new FluentResource(enMessages))
 ```
+
+If you use Vite for local development and another bundler like Rollup for production bundling, it might be that `?raw` won't be supported there. In that case you can use the [vite-raw-plugin](https://www.npmjs.com/package/vite-raw-plugin) to import all `.ftl` files as raw without the `?raw` flag:
+
+```js
+import viteRawPlugin from 'vite-raw-plugin'
+
+export default {
+  ...
+  plugins: [
+    ...,
+    viteRawPlugin({
+      fileRegex: /\.ftl/,
+    }),
+  ]
+}
+```
+
+## Rollup
+
+For Rollup you can use the [rollup-plugin-string](https://www.npmjs.com/package/rollup-plugin-string) plugin and add a rule for importing `.ftl` files as strings:
+
+```js
+import { string } from 'rollup-plugin-string'
+
+export default {
+  ...
+  plugins: [
+    ...,
+    string({
+      include: /\.ftl$/i,
+    }),
+  ],
+};
+```
+
+
