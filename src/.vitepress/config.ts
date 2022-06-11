@@ -93,7 +93,7 @@ export async function highlight(theme: ThemeOptions = 'material-palenight') {
 
 const meta = {
   title: 'fluent-vue - Internationalization plugin for Vue.js',
-  description: 'Vue.js integration for Fluent.js - JavaScript implementation of Mozilla\'s Project Fluent',
+  description: 'Vue.js integration for Fluent.js - JavaScript implementation of Mozilla Project Fluent',
   image: 'https://fluent-vue.demivan.me/preview.png',
 }
 
@@ -102,6 +102,7 @@ export default async() => defineConfig({
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
     ['meta', { property: 'og:url', content: 'https://fluent-vue.demivan.me' }],
+    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: meta.title }],
     ['meta', { property: 'og:description', content: meta.description }],
     ['meta', { property: 'og:image', content: meta.image }],
