@@ -36,10 +36,28 @@ console.log('Fixing html')
 glob
   .sync('**/*.html', { cwd: outDir })
   .forEach(file => {
-    const html = readFileSync(resolve(outDir, file), 'utf-8')
-    const newHtml = html
+    let newHtml = readFileSync(resolve(outDir, file), 'utf-8')
+    newHtml = newHtml
       .replace(/<meta name="description" content="A VitePress site">/g, '')
       .replace(/<img class="logo"/g, '<img class="logo" alt="fluent-vue logo"')
+
+    const metaDescription = newHtml.match(/<meta name="description" content="(.*?)">/)
+    if (metaDescription) {
+      // Change twitter:description to match meta description
+      newHtml = newHtml.replace(/<meta name="twitter:description" content="(.*?)">/, `<meta name="twitter:description" content="${metaDescription[1]}">`)
+
+      // Change og:description to match meta description
+      newHtml = newHtml.replace(/<meta property="og:description" content="(.*?)">/, `<meta property="og:description" content="${metaDescription[1]}">`)
+    } else {
+      // Remove twitter:description and og:description
+      newHtml = newHtml.replace(/<meta name="twitter:description" content="(.*?)">/, '')
+      newHtml = newHtml.replace(/<meta property="og:description" content="(.*?)">/, '')
+    }
+
+    // Change og:url to match canonical url
+    const url = new URL(file.replace(/index\.html/g, ''), hostname).href
+    newHtml = newHtml.replace(/<meta property="og:url" content="(.*?)">/, `<meta property="og:url" content="${url}">`)
+
     writeFileSync(resolve(outDir, file), newHtml)
   })
 console.log('Done')
