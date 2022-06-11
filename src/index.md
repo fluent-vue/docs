@@ -2,7 +2,7 @@
 layout: home
 title: Internationalization plugin for Vue.js
 
-description: fluent-vue is a Vue.js integration for Fluent.js - JavaScript implementation of Mozilla\'s Project Fluent
+description: fluent-vue is a Vue.js integration for Fluent.js - JavaScript implementation of Mozilla's Project Fluent
 
 features:
 - title: Simple api
