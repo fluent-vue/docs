@@ -14,7 +14,7 @@ const now = useNow()
 </template>
 
 <fluent locale="en">
-default = Now is {{ $now }}
+default = Current date: {{ $now }}
 today = Today is {{ DATEFNS($now, "PP") }}
 now = It is {{ DATEFNS($now, "pp") }}
 </fluent>
