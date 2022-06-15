@@ -115,7 +115,7 @@ export default async() => defineConfig({
 
   themeConfig: {
     logo: '/assets/logo.svg',
-    siteTitle: null,
+    siteTitle: 'fluent-vue',
 
     sidebar: [
       {

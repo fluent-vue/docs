@@ -22,6 +22,9 @@ hero:
   name: fluent-vue
   text: Internationalization plugin for Vue.js
   tagline: Vue.js integration for Fluent.js - JavaScript implementation of Mozilla's Project Fluent
+  image:
+    src: /assets/logo.svg
+    alt: fluent-vue
   actions:
     - text: Get Started
       link: /introduction.html

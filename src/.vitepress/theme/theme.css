@@ -1,12 +1,3 @@
-.VPNavBarTitle .logo {
-  width: 226px;
-  height: 35px;
-}
-
-.dark .VPNavBarTitle .logo {
-  filter: invert(80%);
-}
-
 code {
   font-size: 0.875em;
 }
