@@ -1,3 +1,7 @@
+---
+description: fluent-vue API is similar but simpler than vue-i18n as most of the functionality is handled by Fluent syntax. It supports pluralization, date formatting, etc.
+---
+
 # Comparison with vue-i18n
 
 `fluent-vue` API is inspired by `vue-i18n`. But API surface is much smaller as most things are handled by Fluent syntax. 
