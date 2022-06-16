@@ -162,8 +162,7 @@ export default async() => defineConfig({
     ],
 
     editLink: {
-      repo: 'fluent-vue/docs',
-      dir: 'src',
+      pattern: 'https://github.com/fluent-vue/docs/edit/main/src/:path',
       text: 'Edit this page on GitHub'
     },
 
