@@ -168,7 +168,7 @@ export default async() => defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/demivan/fluent-vue' }
+      { icon: 'github', link: 'https://github.com/fluent-vue/fluent-vue' }
     ],
 
     footer: {
