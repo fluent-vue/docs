@@ -9,7 +9,7 @@ specifiers:
   rollup-plugin-fluent-vue: ^3.0.0
   sitemap: ^7.1.1
   tsno: ^2.0.0
-  vitepress: ^1.0.0-alpha.1
+  vitepress: ^1.0.0-alpha.2
   vue: ^3.2.36
 
 dependencies:
@@ -24,7 +24,7 @@ devDependencies:
   rollup-plugin-fluent-vue: 3.0.0
   sitemap: 7.1.1
   tsno: 2.0.0
-  vitepress: 1.0.0-alpha.1
+  vitepress: 1.0.0-alpha.2
 
 packages:
 
@@ -262,6 +262,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.36
       '@vue/shared': 3.2.36
+
+  /@vue/devtools-api/6.1.4:
+    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
+    dev: true
 
   /@vue/reactivity-transform/3.2.36:
     resolution: {integrity: sha512-Jk5o2BhpODC9XTA7o4EL8hSJ4JyrFWErLtClG3NH8wDS7ri9jBDWxI7/549T7JY9uilKsaNM+4pJASLj5dtRwA==}
@@ -856,14 +860,15 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.1:
-    resolution: {integrity: sha512-yA0QIl+mB3fQ2j+keQVa0DTT0waP2AeWM/p9VYfUAT9vOkQEGass4/oYmMGPCQrBwCaO3cpOxJL3ZFVooyvybQ==}
+  /vitepress/1.0.0-alpha.2:
+    resolution: {integrity: sha512-twSsmx2DI/3XgZZ8KLyRAH8RgK2Zj4kJx/kwhZhimwndYqQDrtcIaAcuV+P3FKukZ+cYtm9yt9qohz631jKx4A==}
     engines: {node: '>=14.6.0'}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.1.0
       '@docsearch/js': 3.1.0
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
+      '@vue/devtools-api': 6.1.4
       '@vueuse/core': 8.6.0_vue@3.2.36
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.10.1

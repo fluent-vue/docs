@@ -9,7 +9,7 @@
     "rollup-plugin-fluent-vue": "^3.0.0",
     "sitemap": "^7.1.1",
     "tsno": "^2.0.0",
-    "vitepress": "^1.0.0-alpha.1"
+    "vitepress": "^1.0.0-alpha.2"
   },
   "dependencies": {
     "@fluent/bundle": "^0.17.0",
