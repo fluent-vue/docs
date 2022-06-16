@@ -117,6 +117,12 @@ export default async() => defineConfig({
     logo: '/assets/logo.svg',
     siteTitle: 'fluent-vue',
 
+    algolia: {
+      appId: 'KY7MO3VGVQ',
+      apiKey: 'e6f42eada0a04e0b9d9fd48b210d64db',
+      indexName: 'fluent-vue-demivan',
+    },
+
     sidebar: [
       {
         text: 'Guide',
