@@ -44,7 +44,7 @@ npm install fluent-vue @fluent/bundle
 </code-group>
 
 #### Note:
-If you are using `Vue` version 2 you need to install `@vue/composition-api`
+If you are using `Vue` version <2.7 you need to install `@vue/composition-api`
 
 <code-group>
 <code-group-item title="PNPM" active>
