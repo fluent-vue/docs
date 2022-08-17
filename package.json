@@ -1,21 +1,26 @@
 {
   "scripts": {
     "dev": "vitepress dev src",
-    "build": "vitepress build src",
-    "postbuild": "tsno run scripts/sitemap.ts"
+    "build": "vitepress build src"
   },
   "devDependencies": {
     "fast-glob": "^3.2.11",
     "rollup-plugin-fluent-vue": "^3.0.0",
-    "sitemap": "^7.1.1",
-    "tsno": "^2.0.0",
-    "vitepress": "^1.0.0-alpha.2"
+    "sitemap-ts": "^0.2.2",
+    "vitepress": "1.0.0-alpha.8"
   },
   "dependencies": {
     "@fluent/bundle": "^0.17.0",
     "@vueuse/core": "^8.6.0",
     "date-fns": "^2.25.0",
-    "fluent-vue": "^3.0.0",
+    "fluent-vue": "^3.1.0",
     "vue": "^3.2.36"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   }
 }

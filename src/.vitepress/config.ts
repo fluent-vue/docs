@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 import fluentPlugin from 'rollup-plugin-fluent-vue'
+import { generateSitemap as sitemap } from 'sitemap-ts'
 
 import { BUNDLED_LANGUAGES, Theme, getHighlighter } from 'shiki'
 import VueGrammar from 'shiki/languages/vue.tmLanguage.json'
 import FluentGrammar from './fluent.tmLanguage.json'
+import { fixMeta } from './meta'
 
 const shikiLanguages = BUNDLED_LANGUAGES
   .filter(lang => lang.id !== 'vue')
@@ -95,13 +97,14 @@ const meta = {
   title: 'fluent-vue - Internationalization plugin for Vue.js',
   description: 'Vue.js integration for Fluent.js - JavaScript implementation of Mozilla\'s Project Fluent',
   image: 'https://fluent-vue.demivan.me/preview.png',
+  hostname: 'https://fluent-vue.demivan.me'
 }
 
 export default async() => defineConfig({
   title: 'fluent-vue',
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
-    ['meta', { property: 'og:url', content: 'https://fluent-vue.demivan.me' }],
+    ['meta', { property: 'og:url', content: meta.hostname }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: meta.title }],
     ['meta', { property: 'og:description', content: meta.description }],
@@ -112,6 +115,7 @@ export default async() => defineConfig({
     ['meta', { name: 'twitter:image', content: meta.image }],
     ['meta', { name: 'twitter:creator', content: '@IvanDemchuk' }],
   ],
+  cleanUrls: 'without-subfolders',
 
   themeConfig: {
     logo: '/assets/logo.svg',
@@ -155,8 +159,8 @@ export default async() => defineConfig({
         items: [
           { text: 'Overview', link: '/integrations/' },
           { text: 'Webpack loader', link: '/integrations/webpack' },
-          { text: 'Rollup plugin', link: '/integrations/rollup.html' },
-          { text: 'Vite plugin', link: '/integrations/vite.html' },
+          { text: 'Rollup plugin', link: '/integrations/rollup' },
+          { text: 'Vite plugin', link: '/integrations/vite' },
         ]
       }
     ],
@@ -181,6 +185,14 @@ export default async() => defineConfig({
   vite: {
     plugins: [
       fluentPlugin()
-    ]
-  }
+    ],
+  },
+  buildEnd: () => {
+    sitemap({
+      hostname: meta.hostname,
+      outDir: 'src/.vitepress/dist'
+    })
+
+    fixMeta()
+  },
 })

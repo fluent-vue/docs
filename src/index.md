@@ -27,7 +27,7 @@ hero:
     alt: fluent-vue
   actions:
     - text: Get Started
-      link: /introduction.html
+      link: /introduction
       type: primary
     - theme: alt
       text: View on GitHub
