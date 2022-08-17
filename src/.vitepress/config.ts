@@ -6,7 +6,6 @@ import { generateSitemap as sitemap } from 'sitemap-ts'
 import { BUNDLED_LANGUAGES, Theme, getHighlighter } from 'shiki'
 import VueGrammar from 'shiki/languages/vue.tmLanguage.json'
 import FluentGrammar from './fluent.tmLanguage.json'
-import { fixMeta } from './meta'
 
 const shikiLanguages = BUNDLED_LANGUAGES
   .filter(lang => lang.id !== 'vue')
@@ -102,15 +101,13 @@ const meta = {
 
 export default async() => defineConfig({
   title: 'fluent-vue',
+  description: meta.description,
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
-    ['meta', { property: 'og:url', content: meta.hostname }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: meta.title }],
     ['meta', { property: 'og:description', content: meta.description }],
     ['meta', { property: 'og:image', content: meta.image }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:title', content: meta.title }],
     ['meta', { name: 'twitter:description', content: meta.description }],
     ['meta', { name: 'twitter:image', content: meta.image }],
     ['meta', { name: 'twitter:creator', content: '@IvanDemchuk' }],
@@ -192,7 +189,5 @@ export default async() => defineConfig({
       hostname: meta.hostname,
       outDir: 'src/.vitepress/dist'
     })
-
-    fixMeta()
   },
 })
