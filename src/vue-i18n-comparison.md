@@ -10,7 +10,7 @@ description: fluent-vue API is similar but simpler than vue-i18n as most of the 
 
 `fluent-vue` is compatible with Vue version 2 and version 3 with the same API.
 
-Blog post about my motivation for switching from `vue-i18n`: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/2021-08-08-vue-i18n-in-real-world-application.html)
+Blog post about my motivation for switching from `vue-i18n`: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://blog.demivan.me/difficulties-you-might-encounter-when-using-vue-i18n)
 
 ## Formatting
 
