@@ -99,6 +99,7 @@ const meta = {
 
 export default async() => defineConfig({
   title: 'fluent-vue',
+  description: meta.description,
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
     ['meta', { property: 'og:url', content: 'https://fluent-vue.demivan.me' }],
@@ -114,8 +115,11 @@ export default async() => defineConfig({
   ],
 
   themeConfig: {
-    logo: '/assets/logo.svg',
-    siteTitle: 'fluent-vue',
+    logo: {
+      src: '/assets/logo.svg',
+      alt: 'fluent-vue Logo',
+    },
+    siteTitle: false,
 
     algolia: {
       appId: 'KY7MO3VGVQ',
