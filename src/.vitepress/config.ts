@@ -119,7 +119,7 @@ export default async() => defineConfig({
       src: '/assets/logo.svg',
       alt: 'fluent-vue Logo',
     },
-    siteTitle: false,
+    siteTitle: 'fluent-vue',
 
     algolia: {
       appId: 'KY7MO3VGVQ',
