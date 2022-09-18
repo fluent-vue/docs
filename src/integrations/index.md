@@ -7,23 +7,27 @@ description: List of official and third-party tools that support fluent-vue
 
 This is the list of official and third-party tools that support `fluent-vue`.
 
-## Official 
+## Official
 
-### 1. Webpack loader
+### 1. unplugin-fluent-vue
+
+[unplugin-fluent-vue](/intergrations/unplugin.html) is a plugin for Vite, Webpack and Rollup. It adds support for defining translation messages in Vue SFCs and external ftl files.
+
+### 2. Webpack loader
+
+**Deprecated. Use `unplugin-fluent-vue` instead.**
 
 [fluent-vue-loader](/integrations/webpack.html) is the officially provided Webpack loader.
 
 With `fluent-vue-loader`, you can use `fluent` custom blocks to define locale messages directly in Vue SFC files.
 
-### 2. Rollup and Vite plugin
+### 3. Rollup and Vite plugin
+
+**Deprecated. Use `unplugin-fluent-vue` instead.**
 
 Both [Rollup](/integrations/rollup.html) and [Vite](/integrations/vite.html) integrations are provided by `rollup-plugin-fluent-vue` plugin.
 
 It provides the same functionality as Webpack loader - use custom blocks in SFC files.
-
-### 3. WIP: CLI tool
-
-`fluent-vue-cli` is the official tool that (soon™) allows extracting and importing SFC locale messages to and from FTL files. This allows integration with external translation tools like Mozilla's [Pontoon](https://github.com/mozilla/pontoon/)  
 
 ## Third-party
 
