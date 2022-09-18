@@ -11,7 +11,7 @@ This is the list of official and third-party tools that support `fluent-vue`.
 
 ### 1. unplugin-fluent-vue
 
-[unplugin-fluent-vue](/intergrations/unplugin.html) is a plugin for Vite, Webpack and Rollup. It adds support for defining translation messages in Vue SFCs and external ftl files.
+[unplugin-fluent-vue](/integrations/unplugin.html) is a plugin for Vite, Webpack and Rollup. It adds support for defining translation messages in Vue SFCs and external ftl files.
 
 ### 2. Webpack loader
 
