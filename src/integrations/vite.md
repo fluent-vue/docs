@@ -4,6 +4,8 @@ description: rollup-plugin-fluent-vue - official Vite plugin for fluent-vue that
 
 # Vite plugin
 
+**Deprecated. Use [`unplugin-fluent-vue`](/integrations/unplugin.html) instead.**
+
 Vite support for custom blocks in SFC is provided by [rollup-plugin-fluent-vue](https://www.npmjs.com/package/rollup-plugin-fluent-vue).
 
 ```js

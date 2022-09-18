@@ -158,9 +158,10 @@ export default async() => defineConfig({
         text: 'Tooling and integrations',
         items: [
           { text: 'Overview', link: '/integrations/' },
+          { text: 'Unplugin', link: '/integrations/unplugin' },
           { text: 'Webpack loader', link: '/integrations/webpack' },
-          { text: 'Rollup plugin', link: '/integrations/rollup.html' },
-          { text: 'Vite plugin', link: '/integrations/vite.html' },
+          { text: 'Rollup plugin', link: '/integrations/rollup' },
+          { text: 'Vite plugin', link: '/integrations/vite' },
         ]
       }
     ],
