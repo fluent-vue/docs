@@ -10,6 +10,38 @@ Plugin consists of two parts:
  * `SFCFluentPlugin` - allows defining locale messages in Vue SFC files
  * `ExternalFluentPlugin` - allows defining locale messages in external ftl files
 
+## Instalation
+
+1. Install `unplugin-fluent-vue` package
+
+<code-group>
+
+<code-group-item title="PNPM" active>
+
+```shell
+pnpm add unplugin-fluent-vue -D
+```
+
+</code-group-item>
+
+<code-group-item title="YARN">
+
+```shell
+yarn add unplugin-fluent-vue --dev
+```
+
+</code-group-item>
+
+<code-group-item title="NPM">
+
+```shell
+npm install unplugin-fluent-vue --save-dev
+```
+
+</code-group-item>
+
+</code-group>
+
 ## Usage
 
 ```js
