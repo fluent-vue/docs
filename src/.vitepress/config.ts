@@ -91,10 +91,12 @@ export async function highlight(theme: ThemeOptions = 'material-palenight') {
   }
 }
 
+const domain = 'https://fluent-vue.demivan.me'
+
 const meta = {
   title: 'fluent-vue - Internationalization plugin for Vue.js',
   description: 'Vue.js integration for Fluent.js - JavaScript implementation of Mozilla\'s Project Fluent',
-  image: 'https://fluent-vue.demivan.me/preview.png',
+  image: `${domain}/preview.png`,
 }
 
 export default async() => defineConfig({
@@ -102,7 +104,7 @@ export default async() => defineConfig({
   description: meta.description,
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
-    ['meta', { property: 'og:url', content: 'https://fluent-vue.demivan.me' }],
+    ['meta', { property: 'og:url', content: domain }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: meta.title }],
     ['meta', { property: 'og:description', content: meta.description }],
@@ -113,6 +115,11 @@ export default async() => defineConfig({
     ['meta', { name: 'twitter:image', content: meta.image }],
     ['meta', { name: 'twitter:creator', content: '@IvanDemchuk' }],
   ],
+  transformHead(ctx) {
+    return [
+      ['meta', { property: 'og:url', content: `${domain}/${ctx.pageData.relativePath.replace('.md', '.html').replace('index.html', '')}` }],
+    ]
+  },
 
   themeConfig: {
     logo: {
