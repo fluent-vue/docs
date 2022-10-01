@@ -5,17 +5,17 @@
     "postbuild": "tsno run scripts/sitemap.ts"
   },
   "devDependencies": {
-    "fast-glob": "^3.2.11",
-    "rollup-plugin-fluent-vue": "^3.0.0",
+    "fast-glob": "^3.2.12",
     "sitemap": "^7.1.1",
     "tsno": "^2.0.0",
-    "vitepress": "1.0.0-alpha.15"
+    "unplugin-fluent-vue": "^1.0.0",
+    "vitepress": "^1.0.0-alpha.17"
   },
   "dependencies": {
-    "@fluent/bundle": "^0.17.0",
-    "@vueuse/core": "^8.6.0",
-    "date-fns": "^2.25.0",
+    "@fluent/bundle": "^0.17.1",
+    "@vueuse/core": "^9.3.0",
+    "date-fns": "^2.29.3",
     "fluent-vue": "^3.1.1",
-    "vue": "^3.2.36"
+    "vue": "^3.2.40"
   }
 }

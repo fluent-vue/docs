@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-import fluentPlugin from 'rollup-plugin-fluent-vue'
+import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
 import { BUNDLED_LANGUAGES, Theme, getHighlighter } from 'shiki'
 import VueGrammar from 'shiki/languages/vue.tmLanguage.json'
@@ -192,7 +192,7 @@ export default async() => defineConfig({
   },
   vite: {
     plugins: [
-      fluentPlugin()
+      SFCFluentPlugin()
     ]
   }
 })
