@@ -1,6 +1,8 @@
 # Importing .ftl files
 
-In addition to using Vue custom blocks to define localization messages, it is possible to import them from .ftl files.
+In addition to using Vue custom blocks to define localization messages, it is possible to import them from .ftl files. This allows for easier integration with localization services, for example Mozilla's [Pontoon](https://github.com/mozilla/pontoon). Check `ExternalFluentPlugin` in [unplugin-fluent-vue](/integrations/unplugin.html) for more details.
+
+Enabling `ExternalFluentPlugin` additionally allows to import .ftl files as `FluentResource` objects and add them to the bundle using `bundle.addResource`. This allows you to have shared translation files for all your Vue components:
 
 ```js
 import { FluentBundle, FluentResource } from '@fluent/bundle'
@@ -8,16 +10,12 @@ import { FluentBundle, FluentResource } from '@fluent/bundle'
 import enMessages from './en.ftl'
 
 const enBundle = new FluentBundle('en')
-enBundle.addResource(new FluentResource(enMessages))
+enBundle.addResource(enMessages)
 ```
 
-You will need to configure your build system to support importing .ftl files as raw strings.
+Incase you are not using `ExternalFluentPlugin` you will need to configure your build system to support importing .ftl files as raw strings (*I may move this logic to a separate plugin in the future*):
 
-::: tip Note
-You can code-split your localizations messages into multiple .ftl files. Just import .ftl file when you need and call `bundle.addResource`. But make sure that there are not duplicate keys in different files as localization messages added using `addResource` are global.
-:::
-
-## Webpack
+### Webpack
 
 For Webpack 5 you need to set .ftl files to be `type: 'asset/source'`. In earlier Webpack versions, this was done using `raw-loader`.
 
@@ -33,7 +31,7 @@ module: {
 }
 ```
 
-## Vite
+### Vite
 
 For Vite you need to add `?raw` to your .ftl file imports to import them as strings.
 
@@ -62,7 +60,7 @@ export default {
 }
 ```
 
-## Rollup
+### Rollup
 
 For Rollup you can use the [rollup-plugin-string](https://www.npmjs.com/package/rollup-plugin-string) plugin and add a rule for importing `.ftl` files as strings:
 
@@ -79,5 +77,3 @@ export default {
   ],
 };
 ```
-
-

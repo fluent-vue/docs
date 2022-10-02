@@ -55,16 +55,23 @@ import {
 export default defineConfig({
   plugins: [
     vue(),
-    // Choose one of the following:
-    SFCFluentPlugin({ // define messages in SFCs
+    // define messages in SFCs
+    SFCFluentPlugin({
       blockType: 'fluent', // default 'fluent' - name of the block in SFCs
       checkSyntax: true, // default true - whether to check syntax of the messages
     }),
-    ExternalFluentPlugin({ // define messages in external ftl files
-      baseDir: path.resolve('src'), // required - base directory for Vue files
-      ftlDir: path.resolve('src/locales'), // required - directory with ftl files
+    // define messages in external ftl files
+    ExternalFluentPlugin({
       locales: ['en', 'da'], // required - list of locales
       checkSyntax: true, // default true - whether to check syntax of the messages
+
+      baseDir: path.resolve('src'), // base directory for Vue files
+      ftlDir: path.resolve('src/locales'), // directory with ftl files
+
+      // Instead of using baseDir and ftlDir you can use this function to define path to ftl file for given locale and Vue file.
+      getFtlPath(locale, vuePath) {
+        return path.join(options.ftlDir, locale, `${path.relative(options.baseDir, vuePath)}.ftl`)
+      },
     }),
   ],
 })
