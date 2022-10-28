@@ -8,14 +8,14 @@
     "fast-glob": "^3.2.12",
     "sitemap": "^7.1.1",
     "tsno": "^2.0.0",
-    "unplugin-fluent-vue": "^1.0.0",
-    "vitepress": "^1.0.0-alpha.17"
+    "unplugin-fluent-vue": "^1.1.1",
+    "vitepress": "1.0.0-alpha.26"
   },
   "dependencies": {
     "@fluent/bundle": "^0.17.1",
-    "@vueuse/core": "^9.3.0",
+    "@vueuse/core": "^9.4.0",
     "date-fns": "^2.29.3",
-    "fluent-vue": "^3.1.1",
-    "vue": "^3.2.40"
+    "fluent-vue": "^3.2.0",
+    "vue": "^3.2.41"
   }
 }
