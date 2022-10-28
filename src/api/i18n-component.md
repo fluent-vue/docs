@@ -1,5 +1,5 @@
 ---
-description: i18n component allows localizing text that contains HTML elements or Vue.js components | fluent-vue - Vue.js internationalization plugin
+description: i18n component allows localizing text that contains HTML elements or Vue.js components
 ---
 
 # `i18n` component
