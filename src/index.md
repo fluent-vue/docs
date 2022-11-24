@@ -5,7 +5,7 @@ title: Internationalization plugin for Vue.js
 description: fluent-vue is a Vue.js integration for Fluent.js - JavaScript implementation of Mozilla's Project Fluent
 
 features:
-- title: Simple api
+- title: Simple API
   details: Just 2 methods, 1 directive and 1 component is all you need to internationalize your app.
 - title: Vue 2 and 3 compatible
   details: By utilising @vue/composition-api and internally vue-demi, fluent-vue is made compatible both with Vue version 2 and version 3.
