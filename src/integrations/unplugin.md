@@ -10,7 +10,7 @@ Plugin consists of two parts:
  * `SFCFluentPlugin` - allows defining locale messages in Vue SFC files
  * `ExternalFluentPlugin` - allows defining locale messages in external ftl files
 
-## Instalation
+## Installation
 
 1. Install `unplugin-fluent-vue` package
 
