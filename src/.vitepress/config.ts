@@ -145,7 +145,7 @@ export default async() => defineConfig({
         ]
       },
       {
-        text: 'Api',
+        text: 'API',
         items: [
           { text: '$t and $ta instance methods', link: '/api/instance-methods' },
           { text: 'Composition API', link: '/api/composition-api' },
