@@ -4,13 +4,13 @@ description: fluent-vue API is similar but simpler than vue-i18n as most of the 
 
 # Comparison with vue-i18n
 
-`fluent-vue` API is inspired by `vue-i18n`. But API surface is much smaller as most things are handled by Fluent syntax. 
+I created `fluent-vue` as a replacement for `vue-i18n` on a project I was working on. To make the transition as smooth as possible, I kept the API similar to `vue-i18n`. If you're curious about my reasons for switching from `vue-i18n`, you can read about it in my blog post: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/vue-i18n-difficulties).
 
-`fluent-vue` has only 2 methods (1 rarely used), compared to `vue-i18n` which has 5.
+If you're familiar with `vue-i18n`, you'll find fluent-vue API quite similar. However, there are some key differences.
 
-`fluent-vue` is compatible with Vue version 2 and version 3 with the same API.
+Firstly, the API surface of `fluent-vue` is smaller than that of `vue-i18n`. This is because `fluent-vue` leverages powerfull [Fluent syntax](/fluent-syntax.html) to handle most of the things. As a result, `fluent-vue` only has two methods (one of which is rarely used), while `vue-i18n` has five. Pluralization, number and date formatting, genders and grammatical cases are all handled by Fluent syntax itself.
 
-Blog post about my motivation for switching from `vue-i18n`: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/vue-i18n-difficulties)
+Moreover, `fluent-vue` is compatible with both Vue.js version 2 and 3 with the same API, making it easier to upgrade your application without worrying about compatibility issues.
 
 ## Formatting
 
