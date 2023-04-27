@@ -134,6 +134,25 @@ export default async() => defineConfig({
       indexName: 'fluent-vue-demivan',
     },
 
+    nav: [
+      {
+        text: 'Guide',
+        link: '/introduction.html'
+      },
+      {
+        text: 'Syntax',
+        link: '/fluent-syntax.html'
+      },
+      {
+        text: 'API',
+        link: '/api/instance-methods.html'
+      },
+      {
+        text: 'Comparison with vue-i18n',
+        link: '/vue-i18n-comparison.html'
+      }
+    ],
+
     sidebar: [
       {
         text: 'Guide',
