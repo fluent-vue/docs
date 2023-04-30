@@ -11,6 +11,8 @@ head:
   import DateTimeCustom from '../components/DateTimeCustom.vue'
 
   import { FluentDateTime } from '@fluent/bundle'
+
+  const formatDateTime = (date) => new FluentDateTime(date, { weekday: 'long' })
 </script>
 
 # Localizing date and time
@@ -49,7 +51,7 @@ today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "nume
 $t('today-is', { date: new FluentDateTime(new Date(), { weekday: 'long' }) })
 ```
 
-Result: `{{ $t('today-is', { date: new FluentDateTime(new Date(), { weekday: 'long' }) }) }}`
+Result: `{{ $t('today-is', { date: formatDateTime(new Date()) }) }}`
 
 If the localizer wishes to modify the parameters, for example, because the string doesn't fit in the UI, they can pass the variable to the same function and overload the parameters set by the developer.
 
