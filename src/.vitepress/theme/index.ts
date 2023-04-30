@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 
-import { FluentBundle } from '@fluent/bundle'
+import { FluentBundle, FluentResource } from '@fluent/bundle'
 import { createFluentVue } from 'fluent-vue'
 
 import { format } from 'date-fns'
@@ -18,6 +18,9 @@ const bundle = new FluentBundle('en', {
     }
   }
 })
+
+
+bundle.addResource(new FluentResource('today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }'))
 
 const fluent = createFluentVue({
   bundles: [bundle],
