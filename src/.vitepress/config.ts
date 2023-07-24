@@ -55,7 +55,7 @@ export type ThemeOptions = Theme | { light: Theme; dark: Theme }
 export async function highlight(theme: ThemeOptions = 'material-palenight') {
   const themes = typeof theme === 'string' ? [theme] : [theme.dark, theme.light]
   const highlighter = await getHighlighter({
-    themes, 
+    themes,
     langs: [
       ...shikiLanguages, {
         id: 'vue',
@@ -101,6 +101,7 @@ const meta = {
 
 export default async() => defineConfig({
   title: 'fluent-vue',
+  titleTemplate: ':title - fluent-vue',
   description: meta.description,
   head: [
     ['meta', { name: 'keywords', content: 'vue, i18n, vue i18n, vue.js, internationalization, localization, vue plugin, fluent, project fluent' }],
