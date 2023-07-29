@@ -2,93 +2,48 @@ import { defineConfig } from 'vitepress'
 
 import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
-import { BUNDLED_LANGUAGES, Theme, getHighlighter } from 'shiki'
-import VueGrammar from 'shiki/languages/vue.tmLanguage.json'
+import { getHighlighter } from 'shiki'
 import FluentGrammar from './fluent.tmLanguage.json'
 
-const shikiLanguages = BUNDLED_LANGUAGES
-  .filter(lang => lang.id !== 'vue')
-
-Object.assign(VueGrammar.repository, FluentGrammar.repository)
-
-// Add fluent support to shiki Vue lang definition
-VueGrammar.patterns.unshift(
-  {
-    "begin": "(<)(fluent)",
-    "beginCaptures": {
-      "1": {
-        "name": "punctuation.definition.tag.begin.html"
-      },
-      "2": {
-        "name": "entity.name.tag.style.html"
-      }
-    },
-    "end": "(</)(fluent)(>)",
-    "endCaptures": {
-      "1": {
-        "name": "punctuation.definition.tag.begin.html"
-      },
-      "2": {
-        "name": "entity.name.tag.style.html"
-      },
-      "3": {
-        "name": "punctuation.definition.tag.end.html"
-      }
-    },
-    "patterns": [
-      {
-        "begin": "(>)",
-        "end": "(?=</fluent>)",
-        "contentName": "source.ftl",
-        "patterns": [{
-          "include": "#comment"
-        },{
-          "include": "#message"
-        }]
-      }
-    ]
-  }
-)
-
-export type ThemeOptions = Theme | { light: Theme; dark: Theme }
-
-export async function highlight(theme: ThemeOptions = 'material-palenight') {
-  const themes = typeof theme === 'string' ? [theme] : [theme.dark, theme.light]
-  const highlighter = await getHighlighter({
-    themes,
-    langs: [
-      ...shikiLanguages, {
-        id: 'vue',
-        scopeName: 'source.vue',
-        grammar: VueGrammar
-      }, {
-        id: 'ftl',
-        scopeName: 'source.ftl',
-        grammar: FluentGrammar
-      }
-    ]
+export async function highlight(theme: string = 'dark-plus') {
+  const highlighter = await getHighlighter({ theme, langs: ['vue', 'vue-html', 'html', 'js', 'shell'] })
+  await highlighter.loadLanguage({
+    id: 'ftl',
+    scopeName: 'source.ftl',
+    grammar: FluentGrammar
   })
+
   const preRE = /^<pre.*?>/
 
-  return (str: string, lang: string) => {
+  const highlightText = (str: string, lang: string) => {
     lang = lang || 'text'
 
-    if (typeof theme === 'string') {
-      return highlighter
-        .codeToHtml(str, { lang, theme })
-        .replace(preRE, '<pre v-pre>')
+    let fluentBlockContentHighlighted: string | undefined = undefined
+    if (lang == 'vue') {
+      const fluentBlockRegex = /<fluent.*?>([\s\S]*?)<\/fluent>/g
+      const fluentBlockMatch = fluentBlockRegex.exec(str)
+      if (fluentBlockMatch) {
+        const fluentBlockContent = fluentBlockMatch[1]
+        fluentBlockContentHighlighted = highlighter.codeToHtml(fluentBlockContent, { lang: 'ftl', theme })
+        str = str.replace(fluentBlockContent, '\uFFFC')
+      }
     }
 
-    const dark = highlighter
-      .codeToHtml(str, { lang, theme: theme.dark })
-      .replace(preRE, '<pre v-pre class="vp-code-dark">')
+    let result = highlighter
+      .codeToHtml(str, { lang, theme })
+      .replace(preRE, '<pre v-pre>')
 
-    const light = highlighter
-      .codeToHtml(str, { lang, theme: theme.light })
-      .replace(preRE, '<pre v-pre class="vp-code-light">')
+    if (fluentBlockContentHighlighted != null) {
+      // Remove wrapping <pre> and <code>
+      fluentBlockContentHighlighted = fluentBlockContentHighlighted.replace(/<pre.*?>/g, '').replace(/<\/pre>/g, '')
+      fluentBlockContentHighlighted = fluentBlockContentHighlighted.replace(/<code.*?>/g, '').replace(/<\/code>/g, '')
+      result = result.replace('\uFFFC', fluentBlockContentHighlighted)
+    }
 
-    return dark + light
+    return result
   }
+
+  return highlightText
 }
 
 const domain = 'https://fluent-vue.demivan.me'

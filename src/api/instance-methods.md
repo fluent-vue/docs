@@ -11,7 +11,7 @@ Formats message  with `key` identifier. `args` is used to resolve references to 
 * Returns: `{string}`
 
 Template:
-```html
+```vue-html
 <p>{{ $t('greeting', { name: 'World' }) }}</p>
 ```
 
@@ -40,7 +40,7 @@ This method should be used mostly for passing parameters to custom components. F
 * Returns: `{object}`
 
 Template:
-```html
+```vue-html
 <input v-bind="$ta('login-input')" type="email">
 ```
 

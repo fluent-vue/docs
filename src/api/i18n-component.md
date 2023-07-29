@@ -6,7 +6,7 @@ description: i18n component allows localizing text that contains HTML elements o
 
 Very common problem of localizing web apps is localizing text that needs to include HTML elements or components. Consider the example:
 
-```html
+```vue-html
 <p>
   <router-link :to="{ name: 'login' }">Sign in</router-link>
   or
@@ -17,7 +17,7 @@ Very common problem of localizing web apps is localizing text that needs to incl
 
 One solution for this could be to translate each part of the message separatelly like this:
 
-```html
+```vue-html
 <p>
   <router-link :to="{ name: 'login' }">{{ $t('sign-in') }}</router-link>
   {{ $t('or') }}
@@ -34,7 +34,7 @@ Another solution is using v-html directive. But that only works for simpler stat
 
 Previous example would look like this when using `i18n` component:
 
-```html
+```vue-html
 <i18n path="sign-in-up-to-add-comments" tag="p">
   <template #signInLink="{ signInLabel }">
     <router-link :to="{ name: 'login' }">{{ signInLabel }}</router-link>
@@ -65,12 +65,12 @@ As you can see entire sentence uses just one translation key. It does not use v-
   * `args {object}` message parameters
 
 Message:
-```
+```ftl
 greeting = Hello, {$userName}!
 ```
 
 Template:
-```html
+```vue-html
 <i18n path="greeting" tag="div">
   <template #userName>
     <b>World</b>
@@ -88,7 +88,7 @@ Result:
 Message attributes are passed as scoped slot parameters. This allows to not split translation into multiple messages. And attributes have access to same parameters entire message has access to.
 
 Message:
-```
+```ftl
 sign-in-or-sign-up =
   {$signInLink} or {$signUpLink} to the site.
   .sign-in-label = Sign in
@@ -96,7 +96,7 @@ sign-in-or-sign-up =
 ```
 
 Template:
-```html
+```vue-html
 <i18n path="sign-in-or-sign-up" tag="p">
   <template #signInLink="{ signInLabel }">
     <a href="/login">{{ signInLabel }}</a>

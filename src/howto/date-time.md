@@ -33,7 +33,7 @@ Localizers can specify formatting options that are specific to the given locale.
 today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
 ```
 
-```ts
+```js
 $t('today-is', { date: new Date() })
 ```
 
@@ -47,7 +47,7 @@ The developer can annotate the argument with additional information on how to fo
 today-is = Today is { DATETIME($date, month: "long", year: "numeric", day: "numeric") }
 ```
 
-```ts
+```js
 $t('today-is', { date: new FluentDateTime(new Date(), { weekday: 'long' }) })
 ```
 
@@ -59,12 +59,12 @@ If the localizer wishes to modify the parameters, for example, because the strin
 
 Here is the list of most commonly used parameters:
 
-**dateStyle**: `[ 'full', 'long', 'medium', 'short' ]`  
-**timeStyle**: `[ 'full', 'long', 'medium', 'short' ]`  
-**month**: `[ 'numeric', '2-digit', 'long', 'short', 'narrow' ]`  
-**year**: `[ 'numeric', '2-digit' ]`  
-**weekday**: `[ 'long', 'short', 'narrow' ]`  
-**day, hour, minute, and second**: `[ 'numeric', '2-digit' ]`  
+**dateStyle**: `[ 'full', 'long', 'medium', 'short' ]`<br>
+**timeStyle**: `[ 'full', 'long', 'medium', 'short' ]`<br>
+**month**: `[ 'numeric', '2-digit', 'long', 'short', 'narrow' ]`<br>
+**year**: `[ 'numeric', '2-digit' ]`<br>
+**weekday**: `[ 'long', 'short', 'narrow' ]`<br>
+**day, hour, minute, and second**: `[ 'numeric', '2-digit' ]`<br>
 
 See the [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) for the rest of the parameters and their description.
 
@@ -84,7 +84,7 @@ Here is an example of using `date-fns`:
 
 ### Add custom function to the bundle
 
-```ts
+```js
 import { format } from 'date-fns'
 
 const bundle = new FluentBundle('en', {

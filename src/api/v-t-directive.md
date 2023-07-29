@@ -16,7 +16,7 @@ Usage: `v-t:key="values"`.
   * `{string}`: optional
 
 Template:
-```html
+```vue-html
 <a v-t:link="{ userName }" href="/login"></a>
 ```
 
