@@ -87,7 +87,7 @@ Result:
 
 ### `DATETIME` function
 
-Formats a date and time to a string in a given locale. Main page: [Localizing date and time](/howto/date-time.html)
+Formats a date and time to a string in a given locale. Main page: [Localizing date and time](/howto/date-time)
 
 See the [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) for the description of the parameters.
 
@@ -121,7 +121,7 @@ login-input = Predefined value
     .title = Type your login email
 ```
 
-Attributes may also be used to define grammatical properties of [terms](/fluent-syntax.html#terms). Attributes of terms are private and cannot be retrieved by the localization runtime. They can only be used as [selectors](/fluent-syntax.html#select-expression).
+Attributes may also be used to define grammatical properties of [terms](/fluent-syntax#terms). Attributes of terms are private and cannot be retrieved by the localization runtime. They can only be used as [selectors](/fluent-syntax#select-expression).
 
 ## Terms
 
@@ -154,7 +154,7 @@ about = Informacje o { -brand-name(case: "locative") }.
 
 ### Terms and Attributes
 
-Sometimes translations might vary depending on some grammatical trait of a term references in them. Terms can store this grammatical information about themselves in [attributes](/fluent-syntax.html#attributes).
+Sometimes translations might vary depending on some grammatical trait of a term references in them. Terms can store this grammatical information about themselves in [attributes](/fluent-syntax#attributes).
 
 ```ftl
 -brand-name = Aurora

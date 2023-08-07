@@ -1,16 +1,14 @@
 {
   "scripts": {
     "dev": "vitepress dev src",
-    "build": "vitepress build src",
-    "postbuild": "tsno run scripts/sitemap.ts"
+    "build": "vitepress build src"
   },
   "devDependencies": {
     "fast-glob": "^3.2.12",
     "shiki": "^0.14.3",
-    "sitemap": "^7.1.1",
     "tsno": "^2.0.0",
     "unplugin-fluent-vue": "^1.1.2",
-    "vitepress": "1.0.0-beta.6"
+    "vitepress": "1.0.0-beta.7"
   },
   "dependencies": {
     "@fluent/bundle": "^0.17.1",

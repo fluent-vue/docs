@@ -69,13 +69,17 @@ export default async() => defineConfig({
     ['meta', { name: 'twitter:title', content: meta.title }],
     ['meta', { name: 'twitter:description', content: meta.description }],
     ['meta', { name: 'twitter:image', content: meta.image }],
-    ['meta', { name: 'twitter:creator', content: '@IvanDemchuk' }],
   ],
   transformHead(ctx) {
     return [
-      ['meta', { property: 'og:url', content: `${domain}/${ctx.pageData.relativePath.replace('.md', '.html').replace('index.html', '')}` }],
+      ['meta', { property: 'og:url', content: `${domain}/${ctx.pageData.relativePath.replace('.md', '').replace('index.html', '')}` }],
+      ['link', { rel: 'canonical', href: `${domain}/${ctx.pageData.relativePath.replace('.md', '').replace('index.html', '')}` }]
     ]
   },
+  sitemap: {
+    hostname: domain,
+  },
+  cleanUrls: true,
 
   themeConfig: {
     logo: {
@@ -93,19 +97,19 @@ export default async() => defineConfig({
     nav: [
       {
         text: 'Guide',
-        link: '/introduction.html'
+        link: '/introduction'
       },
       {
         text: 'Syntax',
-        link: '/fluent-syntax.html'
+        link: '/fluent-syntax'
       },
       {
         text: 'API',
-        link: '/api/instance-methods.html'
+        link: '/api/instance-methods'
       },
       {
         text: 'Comparison with vue-i18n',
-        link: '/vue-i18n-comparison.html'
+        link: '/vue-i18n-comparison'
       }
     ],
 

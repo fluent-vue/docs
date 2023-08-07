@@ -1,6 +1,6 @@
 # Importing .ftl files
 
-In addition to using Vue custom blocks to define localization messages, it is possible to import them from .ftl files. This allows for easier integration with localization services, for example Mozilla's [Pontoon](https://github.com/mozilla/pontoon). Check `ExternalFluentPlugin` in [unplugin-fluent-vue](/integrations/unplugin.html) for more details.
+In addition to using Vue custom blocks to define localization messages, it is possible to import them from .ftl files. This allows for easier integration with localization services, for example Mozilla's [Pontoon](https://github.com/mozilla/pontoon). Check `ExternalFluentPlugin` in [unplugin-fluent-vue](/integrations/unplugin) for more details.
 
 Enabling `ExternalFluentPlugin` additionally allows to import .ftl files as `FluentResource` objects and add them to the bundle using `bundle.addResource`. This allows you to have shared translation files for all your Vue components:
 

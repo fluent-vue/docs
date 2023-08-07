@@ -4,7 +4,7 @@ description: fluent-vue-loader - official Webpack loader for fluent-vue that all
 
 # Webpack loader
 
-**Deprecated. Use [`unplugin-fluent-vue`](/integrations/unplugin.html) instead.**
+**Deprecated. Use [`unplugin-fluent-vue`](/integrations/unplugin) instead.**
 
 `fluent-vue-loader` allows you to use custom blocks in your single file components.
 

@@ -4,7 +4,7 @@ description: rollup-plugin-fluent-vue - official Rollup plugin for fluent-vue th
 
 # Rollup plugin
 
-**Deprecated. Use [`unplugin-fluent-vue`](/integrations/unplugin.html) instead.**
+**Deprecated. Use [`unplugin-fluent-vue`](/integrations/unplugin) instead.**
 
 Rollup support for custom blocks in SFC is provided by [rollup-plugin-fluent-vue](https://www.npmjs.com/package/rollup-plugin-fluent-vue).
 
