@@ -72,8 +72,8 @@ export default async() => defineConfig({
   ],
   transformHead(ctx) {
     return [
-      ['meta', { property: 'og:url', content: `${domain}/${ctx.pageData.relativePath.replace('.md', '').replace('index.html', '')}` }],
-      ['link', { rel: 'canonical', href: `${domain}/${ctx.pageData.relativePath.replace('.md', '').replace('index.html', '')}` }]
+      ['meta', { property: 'og:url', content: `${domain}/${ctx.pageData.relativePath.replace('index.md', '').replace('.md', '')}` }],
+      ['link', { rel: 'canonical', href: `${domain}/${ctx.pageData.relativePath.replace('index.md', '').replace('.md', '')}` }]
     ]
   },
   sitemap: {
