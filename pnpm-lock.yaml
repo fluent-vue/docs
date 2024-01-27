@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0
   unplugin-fluent-vue:
-    specifier: ^1.1.2
-    version: 1.1.2
+    specifier: ^1.1.4
+    version: 1.1.4
   vitepress:
     specifier: 1.0.0-rc.40
     version: 1.0.0-rc.40(@algolia/client-search@4.19.1)(search-insights@2.7.0)
@@ -470,9 +470,9 @@ packages:
       '@fluent/bundle': 0.18.0
     dev: false
 
-  /@fluent/syntax@0.18.1:
-    resolution: {integrity: sha512-h0dnIoIg1RwUZRKynTizlVCe0v5qAO9d92ugmRi8sVMM15mwwftf7dpEKdDRc/pybbrpDhmvZRykEel0Cs/RYg==}
-    engines: {node: '>=12.0.0', npm: '>=7.0.0'}
+  /@fluent/syntax@0.19.0:
+    resolution: {integrity: sha512-5D2qVpZrgpjtqU4eNOcWGp1gnUCgjfM+vKGE2y03kKN6z5EBhtx0qdRFbg8QuNNj8wXNoX93KJoYb+NqoxswmQ==}
+    engines: {node: '>=14.0.0', npm: '>=7.0.0'}
     dev: true
 
   /@jridgewell/sourcemap-codec@1.4.15:
@@ -508,7 +508,7 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
@@ -616,10 +616,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@types/estree@1.0.1:
-    resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
-    dev: true
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -794,8 +790,8 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /acorn@8.8.1:
-    resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
+  /acorn@8.11.3:
+    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -1199,13 +1195,6 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: true
 
-  /magic-string@0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
-    dev: true
-
   /magic-string@0.30.5:
     resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
     engines: {node: '>=12'}
@@ -1333,11 +1322,6 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
 
-  /sourcemap-codec@1.4.8:
-    resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
-    deprecated: Please use @jridgewell/sourcemap-codec instead
-    dev: true
-
   /tabbable@6.2.0:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
     dev: true
@@ -1360,24 +1344,24 @@ packages:
       esbuild: 0.14.54
     dev: true
 
-  /unplugin-fluent-vue@1.1.2:
-    resolution: {integrity: sha512-/x023V+GNJzzdmIpg44rvaHYJNSh2vbKoyp+vQujm8iOvyh3uJP6gLNFXANZIdSlLgeZgrvz4Vq2iuAyCxIWNA==}
+  /unplugin-fluent-vue@1.1.4:
+    resolution: {integrity: sha512-cnhw9Mqog/D9qjQ2qRcdaq6RhibphIbnIj2uwVX5gUGhmoJwN3x0QYhpTLV5eMjgrUHK3o/E/07FAa6nGfcMRg==}
     dependencies:
-      '@fluent/syntax': 0.18.1
+      '@fluent/syntax': 0.19.0
       '@rollup/pluginutils': 5.0.2
-      magic-string: 0.26.7
-      unplugin: 0.10.2
+      magic-string: 0.30.5
+      unplugin: 1.6.0
     transitivePeerDependencies:
       - rollup
     dev: true
 
-  /unplugin@0.10.2:
-    resolution: {integrity: sha512-6rk7GUa4ICYjae5PrAllvcDeuT8pA9+j5J5EkxbMFaV+SalHhxZ7X2dohMzu6C3XzsMT+6jwR/+pwPNR3uK9MA==}
+  /unplugin@1.6.0:
+    resolution: {integrity: sha512-BfJEpWBu3aE/AyHx8VaNE/WgouoQxgH9baAiH82JjX8cqVyi3uJQstqwD5J+SZxIK326SZIhsSZlALXVBCknTQ==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.11.3
       chokidar: 3.5.3
       webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.4.6
+      webpack-virtual-modules: 0.6.1
     dev: true
 
   /vite@5.0.12:
@@ -1503,6 +1487,6 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
-  /webpack-virtual-modules@0.4.6:
-    resolution: {integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==}
+  /webpack-virtual-modules@0.6.1:
+    resolution: {integrity: sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==}
     dev: true

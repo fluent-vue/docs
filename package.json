@@ -8,7 +8,7 @@
     "fast-glob": "^3.2.12",
     "shikiji": "0.10.2",
     "tsno": "^2.0.0",
-    "unplugin-fluent-vue": "^1.1.2",
+    "unplugin-fluent-vue": "^1.1.4",
     "vitepress": "1.0.0-rc.40"
   },
   "dependencies": {

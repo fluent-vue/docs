@@ -2,14 +2,19 @@ import { defineConfig } from 'vitepress'
 
 import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
-import { getHighlighter, bundledThemes } from 'shikiji'
-import FluentGrammar from './fluent.tmLanguage.json'
+import { getHighlighter, bundledThemes, LanguageRegistration } from 'shikiji'
+import FluentLanguage from './fluent.tmLanguage.json'
+import VueInjection from './vue.injection.json'
 
 export async function highlight(theme: string = 'dark-plus') {
-  const highlighter = await getHighlighter({ 
-    theme, themes:
-    [bundledThemes['dark-plus']],
-    langs: ['vue', 'vue-html', 'html', 'js', 'shell', FluentGrammar]
+  const highlighter = await getHighlighter({
+    themes: [bundledThemes['dark-plus']],
+    langs: ['vue', 'vue-html', 'html', 'js', 'shell', {
+      "injectTo": [
+        "source.vue"
+      ],
+      ...VueInjection as unknown as LanguageRegistration
+    }, FluentLanguage as unknown as LanguageRegistration]
   })
 
   const preRE = /^<pre.*?>/
@@ -17,27 +22,9 @@ export async function highlight(theme: string = 'dark-plus') {
   const highlightText = (str: string, lang: string) => {
     lang = lang || 'text'
 
-    let fluentBlockContentHighlighted: string | undefined = undefined
-    if (lang == 'vue') {
-      const fluentBlockRegex = /<fluent.*?>([\s\S]*?)<\/fluent>/g
-      const fluentBlockMatch = fluentBlockRegex.exec(str)
-      if (fluentBlockMatch) {
-        const fluentBlockContent = fluentBlockMatch[1]
-        fluentBlockContentHighlighted = highlighter.codeToHtml(fluentBlockContent, { lang: 'ftl', theme })
-        str = str.replace(fluentBlockContent, '\uFFFC')
-      }
-    }
-
     let result = highlighter
       .codeToHtml(str, { lang, theme })
       .replace(preRE, '<pre v-pre>')
-
-    if (fluentBlockContentHighlighted != null) {
-      // Remove wrapping <pre> and <code>
-      fluentBlockContentHighlighted = fluentBlockContentHighlighted.replace(/<pre.*?>/g, '').replace(/<\/pre>/g, '')
-      fluentBlockContentHighlighted = fluentBlockContentHighlighted.replace(/<code.*?>/g, '').replace(/<\/code>/g, '')
-      result = result.replace('\uFFFC', fluentBlockContentHighlighted)
-    }
 
     return result
   }
