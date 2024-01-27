@@ -3,18 +3,19 @@
     "dev": "vitepress dev src",
     "build": "vitepress build src"
   },
+  "type": "module",
   "devDependencies": {
     "fast-glob": "^3.2.12",
-    "shiki": "^0.14.3",
+    "shikiji": "0.10.2",
     "tsno": "^2.0.0",
     "unplugin-fluent-vue": "^1.1.2",
-    "vitepress": "1.0.0-beta.7"
+    "vitepress": "1.0.0-rc.40"
   },
   "dependencies": {
-    "@fluent/bundle": "^0.17.1",
-    "@vueuse/core": "^9.11.1",
-    "date-fns": "^2.29.3",
-    "fluent-vue": "^3.2.0",
-    "vue": "^3.2.45"
+    "@fluent/bundle": "^0.18.0",
+    "@vueuse/core": "^10.7.2",
+    "date-fns": "^3.3.1",
+    "fluent-vue": "^3.5.0",
+    "vue": "^3.4.15"
   }
 }

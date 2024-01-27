@@ -2,15 +2,14 @@ import { defineConfig } from 'vitepress'
 
 import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
-import { getHighlighter } from 'shiki'
+import { getHighlighter, bundledThemes } from 'shikiji'
 import FluentGrammar from './fluent.tmLanguage.json'
 
 export async function highlight(theme: string = 'dark-plus') {
-  const highlighter = await getHighlighter({ theme, langs: ['vue', 'vue-html', 'html', 'js', 'shell'] })
-  await highlighter.loadLanguage({
-    id: 'ftl',
-    scopeName: 'source.ftl',
-    grammar: FluentGrammar
+  const highlighter = await getHighlighter({ 
+    theme, themes:
+    [bundledThemes['dark-plus']],
+    langs: ['vue', 'vue-html', 'html', 'js', 'shell', FluentGrammar]
   })
 
   const preRE = /^<pre.*?>/
