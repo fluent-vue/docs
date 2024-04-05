@@ -2,35 +2,9 @@ import { defineConfig } from 'vitepress'
 
 import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
-import { getHighlighter, bundledThemes, LanguageRegistration } from 'shiki'
+import { type LanguageRegistration } from 'shiki'
 import FluentLanguage from './fluent.tmLanguage.json'
 import VueInjection from './vue.injection.json'
-
-export async function highlight(theme: string = 'dark-plus') {
-  const highlighter = await getHighlighter({
-    themes: [bundledThemes['dark-plus']],
-    langs: ['vue', 'vue-html', 'html', 'js', 'shell', {
-      "injectTo": [
-        "source.vue"
-      ],
-      ...VueInjection as unknown as LanguageRegistration
-    }, FluentLanguage as unknown as LanguageRegistration]
-  })
-
-  const preRE = /^<pre.*?>/
-
-  const highlightText = (str: string, lang: string) => {
-    lang = lang || 'text'
-
-    let result = highlighter
-      .codeToHtml(str, { lang, theme })
-      .replace(preRE, '<pre v-pre>')
-
-    return result
-  }
-
-  return highlightText
-}
 
 const domain = 'https://fluent-vue.demivan.me'
 
@@ -154,7 +128,18 @@ export default async() => defineConfig({
     }
   },
   markdown: {
-    highlight: await highlight(),
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha'
+    },
+    languages: [
+      {
+        "injectTo": [
+          "source.vue"
+        ],
+        ...VueInjection as unknown as LanguageRegistration
+      },
+      FluentLanguage as unknown as LanguageRegistration],
   },
   vite: {
     plugins: [
