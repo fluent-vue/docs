@@ -4,9 +4,9 @@ description: Integrate powerful Fluent localization into your Nuxt 3 apps with f
 
 # Nuxt 3 integration
 
-`fluent-vue` Nuxt support is provided by [unplugin-fluent-vue](./unplugin.md) package.
+`fluent-vue` supports Nuxt Server-side rendering (SSR) using [unplugin-fluent-vue](./unplugin.md) package.
 
-Nuxt module integrates both sub-plugins of `unplugin-fluent-vue` (`SFCFluentPlugin` and `ExternalFluentPlugin`) and adds `Vue` directive transform.
+Nuxt module integrates both sub-plugins of `unplugin-fluent-vue` (`SFCFluentPlugin` and `ExternalFluentPlugin`) and adds Vue directive transform.
 
 ## Installation
 
