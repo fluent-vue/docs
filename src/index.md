@@ -13,8 +13,8 @@ features:
   details: Fluent syntax used for describing translation is easy to read and understand.
 - title: Asymmetric localization
   details: Natural-sounding translations with genders and grammatical cases only when necessary.
-- title: Vue 2 and 3 compatible
-  details: By utilising vue-demi, fluent-vue is made compatible both with Vue version 2 and version 3.
+- title: Vue 2, 3 and Nuxt 3 compatible
+  details: By utilising vue-demi and unplugin, fluent-vue is made compatible with Vue versions 2 and 3 and Nuxt 3.
 - title: SFC support
   details: With unplugin-fluent-vue you can include localization messages with rest of your single file component code.
 
