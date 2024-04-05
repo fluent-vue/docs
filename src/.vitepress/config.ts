@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 import { SFCFluentPlugin } from 'unplugin-fluent-vue/vite'
 
-import { getHighlighter, bundledThemes, LanguageRegistration } from 'shikiji'
+import { getHighlighter, bundledThemes, LanguageRegistration } from 'shiki'
 import FluentLanguage from './fluent.tmLanguage.json'
 import VueInjection from './vue.injection.json'
 

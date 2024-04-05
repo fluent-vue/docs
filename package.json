@@ -5,17 +5,17 @@
   },
   "type": "module",
   "devDependencies": {
-    "fast-glob": "^3.2.12",
-    "shikiji": "0.10.2",
+    "fast-glob": "^3.3.2",
+    "shiki": "^1.2.4",
     "tsno": "^2.0.0",
-    "unplugin-fluent-vue": "^1.1.4",
-    "vitepress": "1.0.0-rc.40"
+    "unplugin-fluent-vue": "^1.3.0",
+    "vitepress": "1.0.2"
   },
   "dependencies": {
     "@fluent/bundle": "^0.18.0",
-    "@vueuse/core": "^10.7.2",
-    "date-fns": "^3.3.1",
-    "fluent-vue": "^3.5.0",
-    "vue": "^3.4.15"
+    "@vueuse/core": "^10.9.0",
+    "date-fns": "^3.6.0",
+    "fluent-vue": "^3.5.1",
+    "vue": "^3.4.21"
   }
 }
