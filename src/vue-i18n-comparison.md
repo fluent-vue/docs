@@ -4,7 +4,7 @@ description: fluent-vue API is similar but simpler than vue-i18n as most of the 
 
 # Comparison with vue-i18n
 
-I created `fluent-vue` as a replacement for `vue-i18n` on a project I was working on. To make the transition as smooth as possible, I kept the API similar to `vue-i18n`. If you're curious about my reasons for switching from `vue-i18n`, you can read about it in my blog post: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/vue-i18n-difficulties).
+I have created `fluent-vue` as a replacement for `vue-i18n` on a project I was working on. To make the transition as smooth as possible, I kept the API similar to `vue-i18n`. If you're curious about my reasons for switching from `vue-i18n`, you can read about it in my blog post: [Difficulties you might encounter when using vue-i18n in real-world Vue.js applications](https://demivan.me/posts/vue-i18n-difficulties).
 
 If you're familiar with `vue-i18n`, you'll find fluent-vue API quite similar. However, there are some key differences.
 
