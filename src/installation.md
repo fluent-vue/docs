@@ -11,7 +11,7 @@
   - `Intl.PluralRules` (standard, new in ECMAScript 2018)
 
 `Intl.PluralRules` may already be available in some engines. Usually,
-however, a polyfill is required. You can use [polyfill.io](https://polyfill.io) service or [intl-pluralrules](https://www.npmjs.com/package/intl-pluralrules) npm package for this purpose.
+however, a polyfill is required. You can use [intl-pluralrules](https://www.npmjs.com/package/intl-pluralrules) npm package for this purpose.
 
 ## Install npm packages
 
