@@ -60,27 +60,32 @@ As you can see entire sentence uses just one translation key. It does not use v-
 ## API
 
 * Props:
-  * `path {string}` localization message key
-  * `tag {string}` html tag to generate. Default is span
-  * `args {object}` message parameters
+  * `path` (string): localization message key
+  * `tag` (string): html tag to generate; default is `<span>`
+  * `args` (object): message parameters
+  * `html` (boolean): whether to render HTML markup in the message; defaults to `false` which escapes any markup (if present). Important: only use this if you trust the translators (and their technical abilities); mistakes can break layout and malicious translations can lead to vulnerabilities.
 
 Message:
 ```ftl
-greeting = Hello, {$userName}!
+greeting = Hello, { $userName }!
+greeting-with-html = Hello, <strong>{ $userName }</strong>!
 ```
 
 Template:
 ```vue-html
-<i18n path="greeting" tag="div">
+<i18n path="greeting" tag="p">
   <template #userName>
-    <b>World</b>
+    <strong>world</strong>
   </template>
+</i18n>
+<i18n html path="greeting-with-html" tag="p">
+  <template #userName>world</template>
 </i18n>
 ```
 
-Result:
+Result (in both cases):
 ```html
-<div>Hello, <b>World</b>!</div>
+<p>Hello, <strong>world</strong>!</p>
 ```
 
 ## Scoped slots
