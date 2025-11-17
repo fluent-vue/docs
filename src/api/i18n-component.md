@@ -4,7 +4,7 @@ description: i18n component allows localizing text that contains HTML elements o
 
 # `i18n` component
 
-Very common problem of localizing web apps is localizing text that needs to include HTML elements or components. Consider the example:
+A common problem when localizing web apps is text containing HTML elements or components. Consider this example:
 
 ```vue-html
 <p>
@@ -15,7 +15,7 @@ Very common problem of localizing web apps is localizing text that needs to incl
 </p>
 ```
 
-One solution for this could be to translate each part of the message separatelly like this:
+One approach is to translate each part of the message separately:
 
 ```vue-html
 <p>
@@ -26,13 +26,11 @@ One solution for this could be to translate each part of the message separatelly
 </p>
 ```
 
-But this is cumbersome and could lead to confusion and errors, as it is hard to see that these messages are actually just one sentence.
+However, this is cumbersome and leads to confusion and errors. For translators, it is hard to see that these messages are actually a single sentence, which also makes it harder to reuse translations. This approach also complicates translating into languages that use a different sentence structure.
 
-Another solution is using v-html directive. But that only works for simpler static HTML. And it could lead to accidentaly breaking a page if the message is not properly formatted.
+Another approach is using Vue's `v-html` directive, but that only works for simpler static HTML, not for components like router links or buttons. Improper formatting in the translation can also accidentally break a page, or even lead to security problems.
 
-`i18n` component allows to use Vue components and HTML elements inside translation messages.
-
-Previous example would look like this when using `i18n` component:
+The `<i18n>` component solves these problems by allowing Vue components and HTML elements inside translation messages in a structured way. The previous example becomes:
 
 ```vue-html
 <i18n path="sign-in-up-to-add-comments" tag="p">
@@ -55,15 +53,15 @@ sign-in-up-to-add-comments =
   .sign-up-label = sign up
 ```
 
-As you can see entire sentence uses just one translation key. It does not use v-html directive. And we can even add comments, so translators know what they are dealing with.
+The entire sentence uses a single translation key and does not use the `v-html` directive. It also allows for comments, so translators know what they are dealing with.
 
 ## API
 
-* Props:
-  * `path` (string): localization message key
-  * `tag` (string): html tag to generate; default is `<span>`
-  * `args` (object): message parameters
-  * `html` (boolean): whether to render HTML markup in the message; defaults to `false` which escapes any markup (if present). Important: only use this if you trust the translators (and their technical abilities); mistakes can break layout and malicious translations can lead to vulnerabilities.
+Props:
+* `path` (string): localization message key
+* `tag` (string or `false`): html tag to generate; default is `<span>`. The literal `false` renders the result without a surrounding tag (Vue 3 only).
+* `args` (object): message parameters
+* `html` (boolean): whether to render HTML markup in the message; defaults to `false` which escapes any markup (if present). Important: only use this if you trust the translators (and their technical abilities); mistakes can break layout and malicious translations can lead to vulnerabilities.
 
 Message:
 ```ftl
@@ -90,7 +88,7 @@ Result (in both cases):
 
 ## Scoped slots
 
-Message attributes are passed as scoped slot parameters. This allows to not split translation into multiple messages. And attributes have access to same parameters entire message has access to.
+Message attributes are passed as scoped slot parameters, which means the translation is contained in a single Fluent message. Message attributes have access to same parameters that the entire message has access to.
 
 Message:
 ```ftl
